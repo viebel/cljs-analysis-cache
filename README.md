@@ -9,10 +9,10 @@ There are two kind of namespaces:
 1. namespaces bundled in lumo e.g `cljs.test`, `cljs.spec`
 2. namepsaces not bundled in lumo e.g. `om.next`, `reagent`
 
-For #1, you need to add the namespace in `scripts/generate-clojure-spec-cache.cljs` and run from the **root folder**
+For #1, you need to add the namespace in `generate-clojure-spec-cache.cljs` and run from the **root folder**
 
 ```bash
-lumo scripts/generate-clojure-spec-cache.cljs
+lumo generate-clojure-spec-cache.cljs
 
 ```
 
