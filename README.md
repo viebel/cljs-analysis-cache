@@ -18,7 +18,7 @@ lumo generate-clojure-spec-cache.cljs
 
 For #2, you need to:
 
-0. `cd docs/cache-cljs`
+0. `cd cache`
 
 1. run `lein deps`
 
