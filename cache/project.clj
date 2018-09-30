@@ -6,7 +6,7 @@
                  [andare "0.4.0"]
                  [cljs-http "0.1.42"]
                  [viebel/gadjett "0.5.4"]
-                 [viebel/klipse-clj "7.5.2"]
+                 [viebel/klipse-clj "7.5.3"]
                  [org.omcljs/om "1.0.0-alpha47"]
                  [com.cemerick/url "0.1.1"]
                  [rewrite-cljs "0.4.3"]
