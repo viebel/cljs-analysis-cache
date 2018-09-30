@@ -2,7 +2,7 @@
 
 Analysis cache and macro precompiled files are stored under `docs/cache-cljs`.
 
-The cache files are generated with `lumo`.
+The cache files are generated with `lumo` or `planck`.
 
 There are two kind of namespaces:
 
@@ -22,11 +22,11 @@ For #2, you need to:
 
 1. run `lein deps`
 
-2. open lumo with the appropriate cache folder and class path:
+2. open lumo/planck with the appropriate cache folder and class path:
 
 ```bash
 export cp=`lein classpath`
-lumo -k . -c $cp
+planck -k . -c $cp
 ```
 
 3. inside lumo, you need to require your namespaces, and the cache will be stored under `docs/cache-cljs` e.g.:
@@ -35,4 +35,6 @@ lumo -k . -c $cp
 cljs.user=> (require 'clojure.test.check)
 ```
 
-4. commit `docs/cache-cljs`
+4. commit `/cache` to master branch
+
+5. push master branch
