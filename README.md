@@ -18,23 +18,25 @@ lumo generate-clojure-spec-cache.cljs
 
 For #2, you need to:
 
-0. `cd cache`
+1. `cd cache`
 
-1. run `lein deps`
+2. add the new dependency in `project.clj`
 
-2. open lumo/planck with the appropriate cache folder and class path:
+3. run `lein deps`
+
+4. open lumo/planck with the appropriate cache folder and class path:
 
 ```bash
 export cp=`lein classpath`
 planck -k . -c $cp
 ```
 
-3. inside lumo, you need to require your namespaces, and the cache will be stored under `docs/cache-cljs` e.g.:
+5. inside lumo, you need to require your namespaces, and the cache will be stored under `docs/cache-cljs` e.g.:
 
 ```bash
 cljs.user=> (require 'clojure.test.check)
 ```
 
-4. commit `/cache` to master branch
+6. commit `/cache` to master branch
 
-5. push master branch
+7. push master branch

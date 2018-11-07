@@ -17,6 +17,7 @@
                  ;[org.clojure/core.match "0.3.0-self-host"]
                  [viebel/reagent "0.6.2"]
                  [viebel/poppea "0.2.1"]
+                 [expound "0.7.1"] 
                  ;[org.clojure/math.combinatorics "0.1.3"]
                  ]
   :npm {:dependencies [["@pupeno/xmlhttprequest" "1.7.0"]]}

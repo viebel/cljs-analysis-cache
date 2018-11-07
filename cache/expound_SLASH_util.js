@@ -1,0 +1,14 @@
+// Compiled by ClojureScript 1.10.339
+goog.provide("expound.util");
+expound.util.assert_message = "Internal Expound assertion failed. Please report this bug at https://github.com/bhb/expound/issues";
+expound.util.nan_QMARK_ = (function expound$util$nan_QMARK_(x){
+var and__8052__auto__ = typeof x === 'number';
+if(and__8052__auto__){
+return isNaN(x);
+} else {
+return and__8052__auto__;
+}
+});
+
+//# sourceURL=expound/util.js
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZXhwb3VuZC91dGlsLmpzIiwic291cmNlcyI6WyJ1dGlsLmNsanMiXSwibGluZUNvdW50IjoxMywibWFwcGluZ3MiOiI7QUFFQSw4QkFBQSw5QkFBS0E7QUFFTCwwQkFBQSwxQkFBTUMsNERBQU1DO0FBQVosQUFFVyxJQUFBQyxvQkFBSyxPQUFTRDtBQUFkLEFBQUEsR0FBQUM7QUFBaUIsT0FBQ0MsTUFBU0Y7O0FBQTNCQyIsIm5hbWVzIjpbImV4cG91bmQudXRpbC9hc3NlcnQtbWVzc2FnZSIsImV4cG91bmQudXRpbC9uYW4/IiwieCIsImFuZF9fODA1Ml9fYXV0b19fIiwianMvaXNOYU4iXSwic291cmNlc0NvbnRlbnQiOlsiKG5zIGV4cG91bmQudXRpbClcblxuKGRlZiBhc3NlcnQtbWVzc2FnZSBcIkludGVybmFsIEV4cG91bmQgYXNzZXJ0aW9uIGZhaWxlZC4gUGxlYXNlIHJlcG9ydCB0aGlzIGJ1ZyBhdCBodHRwczovL2dpdGh1Yi5jb20vYmhiL2V4cG91bmQvaXNzdWVzXCIpXG5cbihkZWZuIG5hbj8gW3hdXG4gICM/KDpjbGogKGFuZCAobnVtYmVyPyB4KSAoRG91YmxlL2lzTmFOIHgpKVxuICAgICA6Y2xqcyAoYW5kIChudW1iZXI/IHgpIChqcy9pc05hTiB4KSkpKVxuIl19
