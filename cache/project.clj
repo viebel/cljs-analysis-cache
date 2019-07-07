@@ -5,7 +5,7 @@
                  [org.clojure/clojurescript "1.10.492"]
                  [andare "0.4.0"]
                  [cljs-http "0.1.42"]
-                 [viebel/gadjett "0.5.4"]
+                 [viebel/gadjett "0.5.9"]
                  [viebel/klipse-clj "10.1.3"]
                  [org.omcljs/om "1.0.0-alpha47"]
                  [com.cemerick/url "0.1.1"]
