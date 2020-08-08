@@ -5,6 +5,7 @@
                  [org.clojure/clojurescript "1.10.516"]
                  [cljs-bean "1.5.0"]
                  [andare "0.4.0"]
+                 [viebel/hoquet "0.0.1"]
                  [cljs-http "0.1.42"]
                  [viebel/gadjett "0.5.9"]
                  [viebel/klipse-clj "10.1.3"]
