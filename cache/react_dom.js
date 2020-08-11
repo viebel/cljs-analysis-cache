@@ -1,5 +1,0 @@
-// Compiled by ClojureScript 1.10.597
-goog.provide("react_dom");
-
-//# sourceURL=react_dom.js
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicmVhY3RfZG9tLmpzIiwic291cmNlcyI6WyJyZWFjdF9kb20uY2xqcyJdLCJsaW5lQ291bnQiOjQsIm1hcHBpbmdzIjoiIiwibmFtZXMiOltdLCJzb3VyY2VzQ29udGVudCI6WyIobnMgcmVhY3QtZG9tKVxuIl19
