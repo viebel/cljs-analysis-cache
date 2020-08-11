@@ -1,126 +1,128 @@
+// Compiled by ClojureScript 1.10.597
 goog.provide("reagent.interop$macros");
-(function (){
-reagent.interop$macros.js_call = (function reagent$interop$macros$js_call(f,args){
-var argstr = clojure.string.join.call(null,",",cljs.core.repeat.call(null,cljs.core.count.call(null,args),"~{}"));
-return cljs.core.list_STAR_.call(null,new cljs.core.Symbol(null,"js*","js*",(-1134233646),null),[cljs.core.str("~{}("),cljs.core.str(argstr),cljs.core.str(")")].join(''),f,args);
-}); return (
-new cljs.core.Var(function(){return reagent.interop$macros.js_call;},new cljs.core.Symbol("reagent.interop$macros","js-call","reagent.interop$macros/js-call",(-6119022),null),cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"private","private",(-558947994)),new cljs.core.Keyword(null,"ns","ns",(441598760)),new cljs.core.Keyword(null,"name","name",(1843675177)),new cljs.core.Keyword(null,"file","file",(-1269645878)),new cljs.core.Keyword(null,"end-column","end-column",(1425389514)),new cljs.core.Keyword(null,"column","column",(2078222095)),new cljs.core.Keyword(null,"line","line",(212345235)),new cljs.core.Keyword(null,"end-line","end-line",(1837326455)),new cljs.core.Keyword(null,"arglists","arglists",(1661989754)),new cljs.core.Keyword(null,"doc","doc",(1913296891)),new cljs.core.Keyword(null,"test","test",(577538877))],[true,new cljs.core.Symbol(null,"reagent.interop$macros","reagent.interop$macros",(-158020944),null),new cljs.core.Symbol(null,"js-call","js-call",(-133977240),null),"reagent/interop.clj",(15),(1),(4),(4),cljs.core.list(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"f","f",(43394975),null),new cljs.core.Symbol(null,"args","args",(-1338879193),null)], null)),null,(cljs.core.truth_(reagent.interop$macros.js_call)?reagent.interop$macros.js_call.cljs$lang$test:null)])));})()
-;
-(function (){
-reagent.interop$macros.dot_args = (function reagent$interop$macros$dot_args(object,member){
-if(((member instanceof cljs.core.Symbol)) || ((member instanceof cljs.core.Keyword))){
-} else {
-throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str([cljs.core.str("Symbol or keyword expected, not "),cljs.core.str(member)].join('')),cljs.core.str("\n"),cljs.core.str("(or (symbol? member) (keyword? member))")].join('')));
-}
+var ret__12698__auto___143 = (function (){
+reagent.interop$macros.unchecked_aget = (function reagent$interop$macros$unchecked_aget(var_args){
+var G__142 = arguments.length;
+switch (G__142) {
+case (4):
+return reagent.interop$macros.unchecked_aget.cljs$core$IFn$_invoke$arity$4((arguments[(0)]),(arguments[(1)]),(arguments[(2)]),(arguments[(3)]));
 
-if((!((object instanceof cljs.core.Symbol))) || (cljs.core.not.call(null,cljs.core.re_find.call(null,/\./,cljs.core.name.call(null,object))))){
-} else {
-throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str([cljs.core.str("Dot not allowed in "),cljs.core.str(object)].join('')),cljs.core.str("\n"),cljs.core.str("(or (not (symbol? object)) (not (re-find #\"\\.\" (name object))))")].join('')));
-}
-
-var n = cljs.core.name.call(null,member);
-var field_QMARK_ = ((member instanceof cljs.core.Keyword)) || (cljs.core._EQ_.call(null,cljs.core.subs.call(null,n,(0),(1)),"-"));
-var names = clojure.string.split.call(null,(((member instanceof cljs.core.Symbol))?clojure.string.replace.call(null,n,/^-/,""):n),/\./);
-return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [field_QMARK_,names], null);
-}); return (
-new cljs.core.Var(function(){return reagent.interop$macros.dot_args;},new cljs.core.Symbol("reagent.interop$macros","dot-args","reagent.interop$macros/dot-args",(609423949),null),cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"private","private",(-558947994)),new cljs.core.Keyword(null,"ns","ns",(441598760)),new cljs.core.Keyword(null,"name","name",(1843675177)),new cljs.core.Keyword(null,"file","file",(-1269645878)),new cljs.core.Keyword(null,"end-column","end-column",(1425389514)),new cljs.core.Keyword(null,"column","column",(2078222095)),new cljs.core.Keyword(null,"line","line",(212345235)),new cljs.core.Keyword(null,"end-line","end-line",(1837326455)),new cljs.core.Keyword(null,"arglists","arglists",(1661989754)),new cljs.core.Keyword(null,"doc","doc",(1913296891)),new cljs.core.Keyword(null,"test","test",(577538877))],[true,new cljs.core.Symbol(null,"reagent.interop$macros","reagent.interop$macros",(-158020944),null),new cljs.core.Symbol(null,"dot-args","dot-args",(435296487),null),"reagent/interop.clj",(16),(1),(9),(9),cljs.core.list(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"object","object",(-1179821820),null),new cljs.core.Symbol(null,"member","member",(-371489289),null)], null)),null,(cljs.core.truth_(reagent.interop$macros.dot_args)?reagent.interop$macros.dot_args.cljs$lang$test:null)])));})()
-;
-/**
- * Access member in a javascript object, in a Closure-safe way.
- *   'member' is assumed to be a field if it is a keyword or if
- *   the name starts with '-', otherwise the named function is
- *   called with the optional args.
- *   'member' may contain '.', to allow access in nested objects.
- *   If 'object' is a symbol it is not allowed contain '.'.
- * 
- *   ($ o :foo) is equivalent to (.-foo o), except that it gives
- *   the same result under advanced compilation.
- *   ($ o foo arg1 arg2) is the same as (.foo o arg1 arg2).
- */
-(function (){
-reagent.interop$macros.$ = (function reagent$interop$macros$$(var_args){
-var args__23658__auto__ = [];
-var len__23656__auto___79 = arguments.length;
-var i__23657__auto___80 = (0);
+break;
+default:
+var args_arr__12684__auto__ = [];
+var len__12666__auto___145 = arguments.length;
+var i__12667__auto___146 = (0);
 while(true){
-if((i__23657__auto___80 < len__23656__auto___79)){
-args__23658__auto__.push((arguments[i__23657__auto___80]));
+if((i__12667__auto___146 < len__12666__auto___145)){
+args_arr__12684__auto__.push((arguments[i__12667__auto___146]));
 
-var G__81 = (i__23657__auto___80 + (1));
-i__23657__auto___80 = G__81;
+var G__147 = (i__12667__auto___146 + (1));
+i__12667__auto___146 = G__147;
 continue;
 } else {
 }
 break;
 }
 
-var argseq__23659__auto__ = ((((4) < args__23658__auto__.length))?(new cljs.core.IndexedSeq(args__23658__auto__.slice((4)),(0),null)):null);
-return reagent.interop$macros.$.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),(arguments[(2)]),(arguments[(3)]),argseq__23659__auto__);
-}); return (
-new cljs.core.Var(function(){return reagent.interop$macros.$;},new cljs.core.Symbol("reagent.interop$macros","$","reagent.interop$macros/$",(-1440306566),null),cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"ns","ns",(441598760)),new cljs.core.Keyword(null,"name","name",(1843675177)),new cljs.core.Keyword(null,"file","file",(-1269645878)),new cljs.core.Keyword(null,"end-column","end-column",(1425389514)),new cljs.core.Keyword(null,"top-fn","top-fn",(-2056129173)),new cljs.core.Keyword(null,"column","column",(2078222095)),new cljs.core.Keyword(null,"line","line",(212345235)),new cljs.core.Keyword(null,"macro","macro",(-867863404)),new cljs.core.Keyword(null,"end-line","end-line",(1837326455)),new cljs.core.Keyword(null,"arglists","arglists",(1661989754)),new cljs.core.Keyword(null,"doc","doc",(1913296891)),new cljs.core.Keyword(null,"test","test",(577538877))],[new cljs.core.Symbol(null,"reagent.interop$macros","reagent.interop$macros",(-158020944),null),new cljs.core.Symbol(null,"$","$",(-1580747756),null),"reagent/interop.clj",(12),new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"variadic","variadic",(882626057)),true,new cljs.core.Keyword(null,"max-fixed-arity","max-fixed-arity",(-690205543)),(4),new cljs.core.Keyword(null,"method-params","method-params",(-980792179)),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.list(new cljs.core.Symbol(null,"&form","&form",(1482799337),null),new cljs.core.Symbol(null,"&env","&env",(-919163083),null),new cljs.core.Symbol(null,"object","object",(-1179821820),null),new cljs.core.Symbol(null,"member","member",(-371489289),null),new cljs.core.Symbol(null,"args","args",(-1338879193),null))], null),new cljs.core.Keyword(null,"arglists","arglists",(1661989754)),cljs.core.list(new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"&form","&form",(1482799337),null),new cljs.core.Symbol(null,"&env","&env",(-919163083),null),new cljs.core.Symbol(null,"object","object",(-1179821820),null),new cljs.core.Symbol(null,"member","member",(-371489289),null),new cljs.core.Symbol(null,"&","&",(-2144855648),null),new cljs.core.Symbol(null,"args","args",(-1338879193),null)], null)),new cljs.core.Keyword(null,"arglists-meta","arglists-meta",(1944829838)),cljs.core.list(null)], null),(1),(25),true,(25),cljs.core.list(new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"&form","&form",(1482799337),null),new cljs.core.Symbol(null,"&env","&env",(-919163083),null),new cljs.core.Symbol(null,"object","object",(-1179821820),null),new cljs.core.Symbol(null,"member","member",(-371489289),null),new cljs.core.Symbol(null,"&","&",(-2144855648),null),new cljs.core.Symbol(null,"args","args",(-1338879193),null)], null)),"Access member in a javascript object, in a Closure-safe way.\n  'member' is assumed to be a field if it is a keyword or if\n  the name starts with '-', otherwise the named function is\n  called with the optional args.\n  'member' may contain '.', to allow access in nested objects.\n  If 'object' is a symbol it is not allowed contain '.'.\n\n  ($ o :foo) is equivalent to (.-foo o), except that it gives\n  the same result under advanced compilation.\n  ($ o foo arg1 arg2) is the same as (.foo o arg1 arg2).",(cljs.core.truth_(reagent.interop$macros.$)?reagent.interop$macros.$.cljs$lang$test:null)])));})()
-;
+var argseq__12685__auto__ = (new cljs.core.IndexedSeq(args_arr__12684__auto__.slice((4)),(0),null));
+return reagent.interop$macros.unchecked_aget.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),(arguments[(2)]),(arguments[(3)]),argseq__12685__auto__);
 
-reagent.interop$macros.$.cljs$core$IFn$_invoke$arity$variadic = (function (_AMPERSAND_form,_AMPERSAND_env,object,member,args){
-var vec__76 = reagent.interop$macros.dot_args.call(null,object,member);
-var field = cljs.core.nth.call(null,vec__76,(0),null);
-var names = cljs.core.nth.call(null,vec__76,(1),null);
-if(cljs.core.truth_(field)){
-if(cljs.core.empty_QMARK_.call(null,args)){
-} else {
-throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str([cljs.core.str("Passing args to field doesn't make sense: "),cljs.core.str(member)].join('')),cljs.core.str("\n"),cljs.core.str("(empty? args)")].join('')));
-}
-
-return cljs.core.sequence.call(null,cljs.core.concat.call(null,cljs.core._conj.call(null,cljs.core.List.EMPTY,new cljs.core.Symbol("cljs.core","aget","cljs.core/aget",(6345791),null)),(function (){var x__23399__auto__ = object;
-return cljs.core._conj.call(null,cljs.core.List.EMPTY,x__23399__auto__);
-})(),names));
-} else {
-return reagent.interop$macros.js_call.call(null,cljs.core.list_STAR_.call(null,new cljs.core.Symbol(null,"aget","aget",(1491056546),null),object,names),args);
 }
 });
 
-reagent.interop$macros.$.cljs$lang$maxFixedArity = (4);
+(reagent.interop$macros.unchecked_aget.cljs$core$IFn$_invoke$arity$4 = (function (_AMPERSAND_form,_AMPERSAND_env,array,idx){
+return (new cljs.core.List(null,new cljs.core.Symbol(null,"js*","js*",(-1134233646),null),(new cljs.core.List(null,"(~{}[~{}])",(new cljs.core.List(null,array,(new cljs.core.List(null,idx,null,(1),null)),(2),null)),(3),null)),(4),null));
+}));
 
-reagent.interop$macros.$.cljs$lang$applyTo = (function (seq71){
-var G__72 = cljs.core.first.call(null,seq71);
-var seq71__$1 = cljs.core.next.call(null,seq71);
-var G__73 = cljs.core.first.call(null,seq71__$1);
-var seq71__$2 = cljs.core.next.call(null,seq71__$1);
-var G__74 = cljs.core.first.call(null,seq71__$2);
-var seq71__$3 = cljs.core.next.call(null,seq71__$2);
-var G__75 = cljs.core.first.call(null,seq71__$3);
-var seq71__$4 = cljs.core.next.call(null,seq71__$3);
-return reagent.interop$macros.$.cljs$core$IFn$_invoke$arity$variadic(G__72,G__73,G__74,G__75,seq71__$4);
-});
+(reagent.interop$macros.unchecked_aget.cljs$core$IFn$_invoke$arity$variadic = (function (_AMPERSAND_form,_AMPERSAND_env,array,idx,idxs){
+var astr = cljs.core.apply.call(null,cljs.core.str,cljs.core.repeat.call(null,cljs.core.count.call(null,idxs),"[~{}]"));
+return cljs.core.sequence.call(null,cljs.core.concat.call(null,(new cljs.core.List(null,new cljs.core.Symbol(null,"js*","js*",(-1134233646),null),null,(1),null)),(new cljs.core.List(null,["(~{}[~{}]",cljs.core.str.cljs$core$IFn$_invoke$arity$1(astr),")"].join(''),null,(1),null)),(new cljs.core.List(null,array,null,(1),null)),(new cljs.core.List(null,idx,null,(1),null)),idxs));
+}));
 
-new cljs.core.Var(function(){return reagent.interop$macros.$;},new cljs.core.Symbol("reagent.interop$macros","$","reagent.interop$macros/$",(-1440306566),null),cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"ns","ns",(441598760)),new cljs.core.Keyword(null,"name","name",(1843675177)),new cljs.core.Keyword(null,"file","file",(-1269645878)),new cljs.core.Keyword(null,"end-column","end-column",(1425389514)),new cljs.core.Keyword(null,"top-fn","top-fn",(-2056129173)),new cljs.core.Keyword(null,"column","column",(2078222095)),new cljs.core.Keyword(null,"line","line",(212345235)),new cljs.core.Keyword(null,"macro","macro",(-867863404)),new cljs.core.Keyword(null,"end-line","end-line",(1837326455)),new cljs.core.Keyword(null,"arglists","arglists",(1661989754)),new cljs.core.Keyword(null,"doc","doc",(1913296891)),new cljs.core.Keyword(null,"test","test",(577538877))],[new cljs.core.Symbol(null,"reagent.interop$macros","reagent.interop$macros",(-158020944),null),new cljs.core.Symbol(null,"$","$",(-1580747756),null),"reagent/interop.clj",(12),new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"variadic","variadic",(882626057)),true,new cljs.core.Keyword(null,"max-fixed-arity","max-fixed-arity",(-690205543)),(4),new cljs.core.Keyword(null,"method-params","method-params",(-980792179)),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.list(new cljs.core.Symbol(null,"&form","&form",(1482799337),null),new cljs.core.Symbol(null,"&env","&env",(-919163083),null),new cljs.core.Symbol(null,"object","object",(-1179821820),null),new cljs.core.Symbol(null,"member","member",(-371489289),null),new cljs.core.Symbol(null,"args","args",(-1338879193),null))], null),new cljs.core.Keyword(null,"arglists","arglists",(1661989754)),cljs.core.list(new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"&form","&form",(1482799337),null),new cljs.core.Symbol(null,"&env","&env",(-919163083),null),new cljs.core.Symbol(null,"object","object",(-1179821820),null),new cljs.core.Symbol(null,"member","member",(-371489289),null),new cljs.core.Symbol(null,"&","&",(-2144855648),null),new cljs.core.Symbol(null,"args","args",(-1338879193),null)], null)),new cljs.core.Keyword(null,"arglists-meta","arglists-meta",(1944829838)),cljs.core.list(null)], null),(1),(25),true,(25),cljs.core.list(new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"&form","&form",(1482799337),null),new cljs.core.Symbol(null,"&env","&env",(-919163083),null),new cljs.core.Symbol(null,"object","object",(-1179821820),null),new cljs.core.Symbol(null,"member","member",(-371489289),null),new cljs.core.Symbol(null,"&","&",(-2144855648),null),new cljs.core.Symbol(null,"args","args",(-1338879193),null)], null)),"Access member in a javascript object, in a Closure-safe way.\n  'member' is assumed to be a field if it is a keyword or if\n  the name starts with '-', otherwise the named function is\n  called with the optional args.\n  'member' may contain '.', to allow access in nested objects.\n  If 'object' is a symbol it is not allowed contain '.'.\n\n  ($ o :foo) is equivalent to (.-foo o), except that it gives\n  the same result under advanced compilation.\n  ($ o foo arg1 arg2) is the same as (.foo o arg1 arg2).",(cljs.core.truth_(reagent.interop$macros.$)?reagent.interop$macros.$.cljs$lang$test:null)]));
+/** @this {Function} */
+(reagent.interop$macros.unchecked_aget.cljs$lang$applyTo = (function (seq137){
+var G__138 = cljs.core.first.call(null,seq137);
+var seq137__$1 = cljs.core.next.call(null,seq137);
+var G__139 = cljs.core.first.call(null,seq137__$1);
+var seq137__$2 = cljs.core.next.call(null,seq137__$1);
+var G__140 = cljs.core.first.call(null,seq137__$2);
+var seq137__$3 = cljs.core.next.call(null,seq137__$2);
+var G__141 = cljs.core.first.call(null,seq137__$3);
+var seq137__$4 = cljs.core.next.call(null,seq137__$3);
+var self__12658__auto__ = this;
+return self__12658__auto__.cljs$core$IFn$_invoke$arity$variadic(G__138,G__139,G__140,G__141,seq137__$4);
+}));
 
-reagent.interop$macros.$.cljs$lang$macro = true;
-/**
- * Set field in a javascript object, in a Closure-safe way.
- *   'field' should be a keyword or a symbol starting with '-'.
- *   'field' may contain '.', to allow access in nested objects.
- *   If 'object' is a symbol it is not allowed contain '.'.
- * 
- *   ($! o :foo 1) is equivalent to (set! (.-foo o) 1), except that it
- *   gives the same result under advanced compilation.
- */
-(function (){
-reagent.interop$macros.$_BANG_ = (function reagent$interop$macros$$_BANG_(_AMPERSAND_form,_AMPERSAND_env,object,field,value){
-var vec__85 = reagent.interop$macros.dot_args.call(null,object,field);
-var field__$1 = cljs.core.nth.call(null,vec__85,(0),null);
-var names = cljs.core.nth.call(null,vec__85,(1),null);
-if(cljs.core.truth_(field__$1)){
+(reagent.interop$macros.unchecked_aget.cljs$lang$maxFixedArity = (4));
+
+return null;
+})()
+;
+(reagent.interop$macros.unchecked_aget.cljs$lang$macro = true);
+
+var ret__12698__auto___156 = (function (){
+reagent.interop$macros.unchecked_aset = (function reagent$interop$macros$unchecked_aset(var_args){
+var G__155 = arguments.length;
+switch (G__155) {
+case (5):
+return reagent.interop$macros.unchecked_aset.cljs$core$IFn$_invoke$arity$5((arguments[(0)]),(arguments[(1)]),(arguments[(2)]),(arguments[(3)]),(arguments[(4)]));
+
+break;
+default:
+var args_arr__12684__auto__ = [];
+var len__12666__auto___158 = arguments.length;
+var i__12667__auto___159 = (0);
+while(true){
+if((i__12667__auto___159 < len__12666__auto___158)){
+args_arr__12684__auto__.push((arguments[i__12667__auto___159]));
+
+var G__160 = (i__12667__auto___159 + (1));
+i__12667__auto___159 = G__160;
+continue;
 } else {
-throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str([cljs.core.str("Field name must start with - in "),cljs.core.str(field__$1)].join('')),cljs.core.str("\n"),cljs.core.str("field")].join('')));
+}
+break;
 }
 
-return cljs.core.sequence.call(null,cljs.core.concat.call(null,cljs.core._conj.call(null,cljs.core.List.EMPTY,new cljs.core.Symbol("cljs.core","aset","cljs.core/aset",(-898215545),null)),(function (){var x__23399__auto__ = object;
-return cljs.core._conj.call(null,cljs.core.List.EMPTY,x__23399__auto__);
-})(),names,(function (){var x__23399__auto__ = value;
-return cljs.core._conj.call(null,cljs.core.List.EMPTY,x__23399__auto__);
-})()));
-}); return (
-new cljs.core.Var(function(){return reagent.interop$macros.$_BANG_;},new cljs.core.Symbol("reagent.interop$macros","$!","reagent.interop$macros/$!",(-1587551610),null),cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"ns","ns",(441598760)),new cljs.core.Keyword(null,"name","name",(1843675177)),new cljs.core.Keyword(null,"file","file",(-1269645878)),new cljs.core.Keyword(null,"end-column","end-column",(1425389514)),new cljs.core.Keyword(null,"column","column",(2078222095)),new cljs.core.Keyword(null,"line","line",(212345235)),new cljs.core.Keyword(null,"macro","macro",(-867863404)),new cljs.core.Keyword(null,"end-line","end-line",(1837326455)),new cljs.core.Keyword(null,"arglists","arglists",(1661989754)),new cljs.core.Keyword(null,"doc","doc",(1913296891)),new cljs.core.Keyword(null,"test","test",(577538877))],[new cljs.core.Symbol(null,"reagent.interop$macros","reagent.interop$macros",(-158020944),null),new cljs.core.Symbol(null,"$!","$!",(-1095699348),null),"reagent/interop.clj",(13),(1),(45),true,(45),cljs.core.list(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"object","object",(-1179821820),null),new cljs.core.Symbol(null,"field","field",(338095027),null),new cljs.core.Symbol(null,"value","value",(1946509744),null)], null)),"Set field in a javascript object, in a Closure-safe way.\n  'field' should be a keyword or a symbol starting with '-'.\n  'field' may contain '.', to allow access in nested objects.\n  If 'object' is a symbol it is not allowed contain '.'.\n\n  ($! o :foo 1) is equivalent to (set! (.-foo o) 1), except that it\n  gives the same result under advanced compilation.",(cljs.core.truth_(reagent.interop$macros.$_BANG_)?reagent.interop$macros.$_BANG_.cljs$lang$test:null)])));})()
-;
+var argseq__12685__auto__ = (new cljs.core.IndexedSeq(args_arr__12684__auto__.slice((5)),(0),null));
+return reagent.interop$macros.unchecked_aset.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),(arguments[(2)]),(arguments[(3)]),(arguments[(4)]),argseq__12685__auto__);
 
-reagent.interop$macros.$_BANG_.cljs$lang$macro = true;
+}
+});
+
+(reagent.interop$macros.unchecked_aset.cljs$core$IFn$_invoke$arity$5 = (function (_AMPERSAND_form,_AMPERSAND_env,array,idx,val){
+return (new cljs.core.List(null,new cljs.core.Symbol(null,"js*","js*",(-1134233646),null),(new cljs.core.List(null,"(~{}[~{}] = ~{})",(new cljs.core.List(null,array,(new cljs.core.List(null,idx,(new cljs.core.List(null,val,null,(1),null)),(2),null)),(3),null)),(4),null)),(5),null));
+}));
+
+(reagent.interop$macros.unchecked_aset.cljs$core$IFn$_invoke$arity$variadic = (function (_AMPERSAND_form,_AMPERSAND_env,array,idx,idx2,idxv){
+var n = (cljs.core.count.call(null,idxv) - (1));
+var astr = cljs.core.apply.call(null,cljs.core.str,cljs.core.repeat.call(null,n,"[~{}]"));
+return cljs.core.sequence.call(null,cljs.core.concat.call(null,(new cljs.core.List(null,new cljs.core.Symbol(null,"js*","js*",(-1134233646),null),null,(1),null)),(new cljs.core.List(null,["(~{}[~{}][~{}]",cljs.core.str.cljs$core$IFn$_invoke$arity$1(astr)," = ~{})"].join(''),null,(1),null)),(new cljs.core.List(null,array,null,(1),null)),(new cljs.core.List(null,idx,null,(1),null)),(new cljs.core.List(null,idx2,null,(1),null)),idxv));
+}));
+
+/** @this {Function} */
+(reagent.interop$macros.unchecked_aset.cljs$lang$applyTo = (function (seq149){
+var G__150 = cljs.core.first.call(null,seq149);
+var seq149__$1 = cljs.core.next.call(null,seq149);
+var G__151 = cljs.core.first.call(null,seq149__$1);
+var seq149__$2 = cljs.core.next.call(null,seq149__$1);
+var G__152 = cljs.core.first.call(null,seq149__$2);
+var seq149__$3 = cljs.core.next.call(null,seq149__$2);
+var G__153 = cljs.core.first.call(null,seq149__$3);
+var seq149__$4 = cljs.core.next.call(null,seq149__$3);
+var G__154 = cljs.core.first.call(null,seq149__$4);
+var seq149__$5 = cljs.core.next.call(null,seq149__$4);
+var self__12658__auto__ = this;
+return self__12658__auto__.cljs$core$IFn$_invoke$arity$variadic(G__150,G__151,G__152,G__153,G__154,seq149__$5);
+}));
+
+(reagent.interop$macros.unchecked_aset.cljs$lang$maxFixedArity = (5));
+
+return null;
+})()
+;
+(reagent.interop$macros.unchecked_aset.cljs$lang$macro = true);
+
+
+//# sourceURL=reagent/interop$macros.js
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicmVhZ2VudC9pbnRlcm9wJG1hY3Jvcy5qcyIsInNvdXJjZXMiOlsiaW50ZXJvcCRtYWNyb3MuY2xqcyJdLCJsaW5lQ291bnQiOjEyNywibWFwcGluZ3MiOiI7QUFJQSxJQUFBQSx5QkFBQTtBQUFBLHdDQUFBLGdEQUFBQyx4RkFBVUU7QUFBVixBQUFBLElBQUFELFNBQUEsQUFBQTtBQUFBLEFBQUEsUUFBQUE7S0FBQTtBQUFBLE9BQUFDLG9FQUFBLENBQUEsVUFBQSxNQUFBLENBQUEsVUFBQSxNQUFBLENBQUEsVUFBQSxNQUFBLENBQUEsVUFBQTs7OztBQUFBLElBQUFDLDBCQUFBO0FBQUEsQUFBQSxJQUFBQyx5QkFBQSxBQUFBO0FBQUEsQUFBQSxJQUFBQyx1QkFBQTs7QUFBQSxBQUFBLEdBQUEsQ0FBQUEsdUJBQUFEO0FBQUEsQUFBQSxBQUFBRCw2QkFBQSxDQUFBLFVBQUFFOztBQUFBLGFBQUEsQ0FBQUEsdUJBQUE7Ozs7QUFBQTs7OztBQUFBLElBQUFDLHdCQUFBLDBCQUFBLEFBQUFILDhCQUFBLEtBQUEsSUFBQSw1REFpcUcwRHFDO0FBanFHMUQsQUFBQSxPQUFBdEMsMkVBQUEsQ0FBQSxVQUFBLE1BQUEsQ0FBQSxVQUFBLE1BQUEsQ0FBQSxVQUFBLE1BQUEsQ0FBQSxVQUFBLE1BQUFJOzs7OztBQUFBLENBQUEsc0VBQUEsV0FBQUMsZ0JBQUFDLGpHQUFVTixnSEFDTmEsTUFBTUM7QUFEVixBQUVHLFlBQUFDLGVBQUEsS0FBQSxBQUFBLDBEQUFBLEtBQUFBLGVBQUEsS0FBQSxhQUFBLEtBQUFBLGVBQUEsV0FBQSxLQUFBQSxlQUFBLFNBQUEsS0FBQSxJQUFBLE9BQUEsSUFBQSxPQUFBLElBQUEsT0FBQSxJQUFBLDdFQUF3QkYsK0JBQU1DOzs7QUFGakMsQUFBQSxDQUFBLDZFQUFBLFdBQUFULGdCQUFBQyx4R0FBVU4sdUhBR05hLE1BQU1DLElBQU1FO0FBSGhCLEFBSUcsSUFBTUcsT0FBSyxBQUFDQywwQkFBTUMsY0FBSSwyREFBQSwzREFBQ0MsMkJBQU8s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QXNCSSxtRUFBaUJOLCtDQUFPQyw2Q0FBS21CLHFCQUFPQzs7O0FBTnhFO0FBQUEsQ0FBQSwwREFBQSxXQUFBUixyRUFBVUQ7QUFBVixBQUFBLElBQUFFLFNBQUEsMEJBQUFELDFCQXNoR2dEVTtJQXRoR2hEVixhQUFBLHlCQUFBQSx6QkF1aEdrRFc7SUF2aEdsRFQsU0FBQSwwQkFBQUYsMUJBc2hHZ0RVO0lBdGhHaERWLGFBQUEseUJBQUFBLHpCQXVoR2tEVztJQXZoR2xEUixTQUFBLDBCQUFBSCwxQkFzaEdnRFU7SUF0aEdoRFYsYUFBQSx5QkFBQUEsekJBdWhHa0RXO0lBdmhHbERQLFNBQUEsMEJBQUFKLDFCQXNoR2dEVTtJQXRoR2hEVixhQUFBLHlCQUFBQSx6QkF1aEdrRFc7SUF2aEdsRE4sU0FBQSwwQkFBQUwsMUJBc2hHZ0RVO0lBdGhHaERWLGFBQUEseUJBQUFBLHpCQXVoR2tEVztBQXZoR2xELEFBQUEsSUFBQXpCLHNCQUFBO0FBQUEsQUFBQSxPQUFBQSx5REFBQWUsT0FBQUMsT0FBQUMsT0FBQUMsT0FBQUMsT0FBQUw7OztBQUFBLENBQUEsZ0VBQUEsaEVBQVVEOztBQUFWOzs7QUFBQSxBQUFBLENBQUEsd0RBQUEseERBQVVBOztBQUFWNUIiLCJuYW1lcyI6WyJyZXRfXzEyNjk4X19hdXRvX18iLCJ2YXJfYXJncyIsIkdfXzE0MiIsInJlYWdlbnQuaW50ZXJvcCRtYWNyb3MvdW5jaGVja2VkLWFnZXQiLCJhcmdzLWFycl9fMTI2ODRfX2F1dG9fXyIsImxlbl9fMTI2NjZfX2F1dG9fXyIsImlfXzEyNjY3X19hdXRvX18iLCJhcmdzZXFfXzEyNjg1X19hdXRvX18iLCImZm9ybSIsIiZlbnYiLCJzZXExMzciLCJHX18xMzgiLCJHX18xMzkiLCJHX18xNDAiLCJHX18xNDEiLCJzZWxmX18xMjY1OF9fYXV0b19fIiwiYXJyYXkiLCJpZHgiLCJjbGpzLmNvcmUvTGlzdCIsImlkeHMiLCJjbGpzLmNvcmUvc2VxdWVuY2UiLCJjbGpzLmNvcmUvY29uY2F0IiwiYXN0ciIsImNsanMuY29yZS9hcHBseSIsImNsanMuY29yZS9zdHIiLCJjbGpzLmNvcmUvcmVwZWF0IiwiY2xqcy5jb3JlL2NvdW50IiwiR19fMTU1IiwicmVhZ2VudC5pbnRlcm9wJG1hY3Jvcy91bmNoZWNrZWQtYXNldCIsInNlcTE0OSIsIkdfXzE1MCIsIkdfXzE1MSIsIkdfXzE1MiIsIkdfXzE1MyIsIkdfXzE1NCIsInZhbCIsImlkeDIiLCJpZHh2IiwibiIsImNsanMuY29yZS9maXJzdCIsImNsanMuY29yZS9uZXh0IiwiY2xqcy5jb3JlL0luZGV4ZWRTZXEiXSwic291cmNlc0NvbnRlbnQiOlsiKG5zIHJlYWdlbnQuaW50ZXJvcClcblxuOyB0YWtlbiBmcm9tIGNsanMuY29yZVxuOyBodHRwczovL2dpdGh1Yi5jb20vYmluYXJ5YWdlL2NsanMtb29wcy9pc3N1ZXMvMTRcbihkZWZtYWNybyB1bmNoZWNrZWQtYWdldFxuICAoW2FycmF5IGlkeF1cbiAgIChsaXN0ICdqcyogXCIofnt9W357fV0pXCIgYXJyYXkgaWR4KSlcbiAgKFthcnJheSBpZHggJiBpZHhzXVxuICAgKGxldCBbYXN0ciAoYXBwbHkgc3RyIChyZXBlYXQgKGNvdW50IGlkeHMpIFwiW357fV1cIikpXVxuICAgICBgKH4nanMqIH4oc3RyIFwiKH57fVt+e31dXCIgYXN0ciBcIilcIikgfmFycmF5IH5pZHggfkBpZHhzKSkpKVxuXG47IHRha2VuIGZyb20gY2xqcy5jb3JlXG47IGh0dHBzOi8vZ2l0aHViLmNvbS9iaW5hcnlhZ2UvY2xqcy1vb3BzL2lzc3Vlcy8xNFxuKGRlZm1hY3JvIHVuY2hlY2tlZC1hc2V0XG4gIChbYXJyYXkgaWR4IHZhbF1cbiAgIChsaXN0ICdqcyogXCIofnt9W357fV0gPSB+e30pXCIgYXJyYXkgaWR4IHZhbCkpXG4gIChbYXJyYXkgaWR4IGlkeDIgJiBpZHh2XVxuICAgKGxldCBbbiAoZGVjIChjb3VudCBpZHh2KSlcbiAgICAgICAgIGFzdHIgKGFwcGx5IHN0ciAocmVwZWF0IG4gXCJbfnt9XVwiKSldXG4gICAgIGAofidqcyogfihzdHIgXCIofnt9W357fV1bfnt9XVwiIGFzdHIgXCIgPSB+e30pXCIpIH5hcnJheSB+aWR4IH5pZHgyIH5AaWR4dikpKSlcbiJdfQ==

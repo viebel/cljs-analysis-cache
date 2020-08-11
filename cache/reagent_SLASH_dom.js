@@ -1,109 +1,52 @@
+// Compiled by ClojureScript 1.10.597
 goog.provide("reagent.dom");
-if(typeof reagent.dom.imported !== 'undefined'){
+if((typeof reagent !== 'undefined') && (typeof reagent.dom !== 'undefined') && (typeof reagent.dom.roots !== 'undefined')){
 } else {
-(function (){
-reagent.dom.imported = null; return (
-new cljs.core.Var(function(){return reagent.dom.imported;},new cljs.core.Symbol("reagent.dom","imported","reagent.dom/imported",(-289376445),null),cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"private","private",(-558947994)),new cljs.core.Keyword(null,"ns","ns",(441598760)),new cljs.core.Keyword(null,"name","name",(1843675177)),new cljs.core.Keyword(null,"file","file",(-1269645878)),new cljs.core.Keyword(null,"end-column","end-column",(1425389514)),new cljs.core.Keyword(null,"column","column",(2078222095)),new cljs.core.Keyword(null,"line","line",(212345235)),new cljs.core.Keyword(null,"end-line","end-line",(1837326455)),new cljs.core.Keyword(null,"arglists","arglists",(1661989754)),new cljs.core.Keyword(null,"doc","doc",(1913296891)),new cljs.core.Keyword(null,"test","test",(577538877))],[true,new cljs.core.Symbol(null,"reagent.dom","reagent.dom",(-2138920962),null),new cljs.core.Symbol(null,"imported","imported",(656152905),null),"reagent/dom.cljs",(28),(1),(10),(10),cljs.core.List.EMPTY,null,(cljs.core.truth_(reagent.dom.imported)?reagent.dom.imported.cljs$lang$test:null)])));})()
-;
+reagent.dom.roots = cljs.core.atom.call(null,cljs.core.PersistentArrayMap.EMPTY);
 }
-(function (){
-reagent.dom.module = (function reagent$dom$module(){
-if(cljs.core.some_QMARK_.call(null,reagent.dom.imported)){
-return reagent.dom.imported;
-} else {
-if(typeof ReactDOM !== 'undefined'){
-return reagent.dom.imported = ReactDOM;
-} else {
-if(typeof require !== 'undefined'){
-var or__20817__auto__ = reagent.dom.imported = require("react-dom");
-if(cljs.core.truth_(or__20817__auto__)){
-return or__20817__auto__;
-} else {
-throw (new Error("require('react-dom') failed"));
-}
-} else {
-throw (new Error("js/ReactDOM is missing"));
-
-}
-}
-}
-}); return (
-new cljs.core.Var(function(){return reagent.dom.module;},new cljs.core.Symbol("reagent.dom","module","reagent.dom/module",(-807511268),null),cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"ns","ns",(441598760)),new cljs.core.Keyword(null,"name","name",(1843675177)),new cljs.core.Keyword(null,"file","file",(-1269645878)),new cljs.core.Keyword(null,"end-column","end-column",(1425389514)),new cljs.core.Keyword(null,"column","column",(2078222095)),new cljs.core.Keyword(null,"line","line",(212345235)),new cljs.core.Keyword(null,"end-line","end-line",(1837326455)),new cljs.core.Keyword(null,"arglists","arglists",(1661989754)),new cljs.core.Keyword(null,"doc","doc",(1913296891)),new cljs.core.Keyword(null,"test","test",(577538877))],[new cljs.core.Symbol(null,"reagent.dom","reagent.dom",(-2138920962),null),new cljs.core.Symbol(null,"module","module",(-1229817578),null),"reagent/dom.cljs",(13),(1),(12),(12),cljs.core.list(cljs.core.PersistentVector.EMPTY),null,(cljs.core.truth_(reagent.dom.module)?reagent.dom.module.cljs$lang$test:null)])));})()
-;
-if(typeof reagent.dom.roots !== 'undefined'){
-} else {
-(function (){
-reagent.dom.roots = cljs.core.atom.call(null,cljs.core.PersistentArrayMap.EMPTY); return (
-new cljs.core.Var(function(){return reagent.dom.roots;},new cljs.core.Symbol("reagent.dom","roots","reagent.dom/roots",(-343621265),null),cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"private","private",(-558947994)),new cljs.core.Keyword(null,"ns","ns",(441598760)),new cljs.core.Keyword(null,"name","name",(1843675177)),new cljs.core.Keyword(null,"file","file",(-1269645878)),new cljs.core.Keyword(null,"end-column","end-column",(1425389514)),new cljs.core.Keyword(null,"column","column",(2078222095)),new cljs.core.Keyword(null,"line","line",(212345235)),new cljs.core.Keyword(null,"end-line","end-line",(1837326455)),new cljs.core.Keyword(null,"arglists","arglists",(1661989754)),new cljs.core.Keyword(null,"doc","doc",(1913296891)),new cljs.core.Keyword(null,"test","test",(577538877))],[true,new cljs.core.Symbol(null,"reagent.dom","reagent.dom",(-2138920962),null),new cljs.core.Symbol(null,"roots","roots",(551612277),null),"reagent/dom.cljs",(25),(1),(22),(22),cljs.core.List.EMPTY,null,(cljs.core.truth_(reagent.dom.roots)?reagent.dom.roots.cljs$lang$test:null)])));})()
-;
-}
-(function (){
 reagent.dom.unmount_comp = (function reagent$dom$unmount_comp(container){
 cljs.core.swap_BANG_.call(null,reagent.dom.roots,cljs.core.dissoc,container);
 
-return (reagent.dom.module.call(null)["unmountComponentAtNode"])(container);
-}); return (
-new cljs.core.Var(function(){return reagent.dom.unmount_comp;},new cljs.core.Symbol("reagent.dom","unmount-comp","reagent.dom/unmount-comp",(-1611113582),null),cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"private","private",(-558947994)),new cljs.core.Keyword(null,"ns","ns",(441598760)),new cljs.core.Keyword(null,"name","name",(1843675177)),new cljs.core.Keyword(null,"file","file",(-1269645878)),new cljs.core.Keyword(null,"end-column","end-column",(1425389514)),new cljs.core.Keyword(null,"column","column",(2078222095)),new cljs.core.Keyword(null,"line","line",(212345235)),new cljs.core.Keyword(null,"end-line","end-line",(1837326455)),new cljs.core.Keyword(null,"arglists","arglists",(1661989754)),new cljs.core.Keyword(null,"doc","doc",(1913296891)),new cljs.core.Keyword(null,"test","test",(577538877))],[true,new cljs.core.Symbol(null,"reagent.dom","reagent.dom",(-2138920962),null),new cljs.core.Symbol(null,"unmount-comp","unmount-comp",(-719472236),null),"reagent/dom.cljs",(20),(1),(24),(24),cljs.core.list(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"container","container",(-96406180),null)], null)),null,(cljs.core.truth_(reagent.dom.unmount_comp)?reagent.dom.unmount_comp.cljs$lang$test:null)])));})()
-;
-(function (){
+return react_dom.unmountComponentAtNode.call(null,container);
+});
 reagent.dom.render_comp = (function reagent$dom$render_comp(comp,container,callback){
-var _STAR_always_update_STAR_380 = reagent.impl.util._STAR_always_update_STAR_;
-reagent.impl.util._STAR_always_update_STAR_ = true;
+var _STAR_always_update_STAR__orig_val__23 = reagent.impl.util._STAR_always_update_STAR_;
+var _STAR_always_update_STAR__temp_val__24 = true;
+(reagent.impl.util._STAR_always_update_STAR_ = _STAR_always_update_STAR__temp_val__24);
 
-try{return (reagent.dom.module.call(null)["render"])(comp.call(null),container,((function (_STAR_always_update_STAR_380){
-return (function (){
-var _STAR_always_update_STAR_381 = reagent.impl.util._STAR_always_update_STAR_;
-reagent.impl.util._STAR_always_update_STAR_ = false;
+try{return react_dom.render.call(null,comp.call(null),container,(function (){
+var _STAR_always_update_STAR__orig_val__25 = reagent.impl.util._STAR_always_update_STAR_;
+var _STAR_always_update_STAR__temp_val__26 = false;
+(reagent.impl.util._STAR_always_update_STAR_ = _STAR_always_update_STAR__temp_val__26);
 
-try{cljs.core.swap_BANG_.call(null,reagent.dom.roots,cljs.core.assoc,container,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [comp,container], null));
+try{cljs.core.swap_BANG_.call(null,reagent.dom.roots,cljs.core.assoc,container,comp);
 
 reagent.impl.batching.flush_after_render.call(null);
 
-if(cljs.core.some_QMARK_.call(null,callback)){
+if((!((callback == null)))){
 return callback.call(null);
 } else {
 return null;
 }
-}finally {reagent.impl.util._STAR_always_update_STAR_ = _STAR_always_update_STAR_381;
-}});})(_STAR_always_update_STAR_380))
-);
-}finally {reagent.impl.util._STAR_always_update_STAR_ = _STAR_always_update_STAR_380;
-}}); return (
-new cljs.core.Var(function(){return reagent.dom.render_comp;},new cljs.core.Symbol("reagent.dom","render-comp","reagent.dom/render-comp",(-304101378),null),cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"private","private",(-558947994)),new cljs.core.Keyword(null,"ns","ns",(441598760)),new cljs.core.Keyword(null,"name","name",(1843675177)),new cljs.core.Keyword(null,"file","file",(-1269645878)),new cljs.core.Keyword(null,"end-column","end-column",(1425389514)),new cljs.core.Keyword(null,"column","column",(2078222095)),new cljs.core.Keyword(null,"line","line",(212345235)),new cljs.core.Keyword(null,"end-line","end-line",(1837326455)),new cljs.core.Keyword(null,"arglists","arglists",(1661989754)),new cljs.core.Keyword(null,"doc","doc",(1913296891)),new cljs.core.Keyword(null,"test","test",(577538877))],[true,new cljs.core.Symbol(null,"reagent.dom","reagent.dom",(-2138920962),null),new cljs.core.Symbol(null,"render-comp","render-comp",(-1535952444),null),"reagent/dom.cljs",(19),(1),(28),(28),cljs.core.list(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"comp","comp",(-1462482139),null),new cljs.core.Symbol(null,"container","container",(-96406180),null),new cljs.core.Symbol(null,"callback","callback",(935395299),null)], null)),null,(cljs.core.truth_(reagent.dom.render_comp)?reagent.dom.render_comp.cljs$lang$test:null)])));})()
-;
-(function (){
+}finally {(reagent.impl.util._STAR_always_update_STAR_ = _STAR_always_update_STAR__orig_val__25);
+}}));
+}finally {(reagent.impl.util._STAR_always_update_STAR_ = _STAR_always_update_STAR__orig_val__23);
+}});
 reagent.dom.re_render_component = (function reagent$dom$re_render_component(comp,container){
 return reagent.dom.render_comp.call(null,comp,container,null);
-}); return (
-new cljs.core.Var(function(){return reagent.dom.re_render_component;},new cljs.core.Symbol("reagent.dom","re-render-component","reagent.dom/re-render-component",(1678013624),null),cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"private","private",(-558947994)),new cljs.core.Keyword(null,"ns","ns",(441598760)),new cljs.core.Keyword(null,"name","name",(1843675177)),new cljs.core.Keyword(null,"file","file",(-1269645878)),new cljs.core.Keyword(null,"end-column","end-column",(1425389514)),new cljs.core.Keyword(null,"column","column",(2078222095)),new cljs.core.Keyword(null,"line","line",(212345235)),new cljs.core.Keyword(null,"end-line","end-line",(1837326455)),new cljs.core.Keyword(null,"arglists","arglists",(1661989754)),new cljs.core.Keyword(null,"doc","doc",(1913296891)),new cljs.core.Keyword(null,"test","test",(577538877))],[true,new cljs.core.Symbol(null,"reagent.dom","reagent.dom",(-2138920962),null),new cljs.core.Symbol(null,"re-render-component","re-render-component",(-1293919582),null),"reagent/dom.cljs",(27),(1),(38),(38),cljs.core.list(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"comp","comp",(-1462482139),null),new cljs.core.Symbol(null,"container","container",(-96406180),null)], null)),null,(cljs.core.truth_(reagent.dom.re_render_component)?reagent.dom.re_render_component.cljs$lang$test:null)])));})()
-;
+});
 /**
  * Render a Reagent component into the DOM. The first argument may be
- *   either a vector (using Reagent's Hiccup syntax), or a React element. The second argument should be a DOM node.
+ *   either a vector (using Reagent's Hiccup syntax), or a React element.
+ *   The second argument should be a DOM node.
  * 
  *   Optionally takes a callback that is called when the component is in place.
  * 
  *   Returns the mounted component instance.
  */
-(function (){
 reagent.dom.render = (function reagent$dom$render(var_args){
-var args382 = [];
-var len__23656__auto___385 = arguments.length;
-var i__23657__auto___386 = (0);
-while(true){
-if((i__23657__auto___386 < len__23656__auto___385)){
-args382.push((arguments[i__23657__auto___386]));
-
-var G__387 = (i__23657__auto___386 + (1));
-i__23657__auto___386 = G__387;
-continue;
-} else {
-}
-break;
-}
-
-var G__384 = args382.length;
-switch (G__384) {
+var G__28 = arguments.length;
+switch (G__28) {
 case (2):
 return reagent.dom.render.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -113,45 +56,41 @@ return reagent.dom.render.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(argume
 
 break;
 default:
-throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args382.length)].join('')));
+throw (new Error(["Invalid arity: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(arguments.length)].join('')));
 
 }
-}); return (
-new cljs.core.Var(function(){return reagent.dom.render;},new cljs.core.Symbol("reagent.dom","render","reagent.dom/render",(-1216356973),null),cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"ns","ns",(441598760)),new cljs.core.Keyword(null,"name","name",(1843675177)),new cljs.core.Keyword(null,"file","file",(-1269645878)),new cljs.core.Keyword(null,"end-column","end-column",(1425389514)),new cljs.core.Keyword(null,"top-fn","top-fn",(-2056129173)),new cljs.core.Keyword(null,"column","column",(2078222095)),new cljs.core.Keyword(null,"line","line",(212345235)),new cljs.core.Keyword(null,"end-line","end-line",(1837326455)),new cljs.core.Keyword(null,"arglists","arglists",(1661989754)),new cljs.core.Keyword(null,"doc","doc",(1913296891)),new cljs.core.Keyword(null,"test","test",(577538877))],[new cljs.core.Symbol(null,"reagent.dom","reagent.dom",(-2138920962),null),new cljs.core.Symbol(null,"render","render",(232498073),null),"reagent/dom.cljs",(13),new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"variadic","variadic",(882626057)),false,new cljs.core.Keyword(null,"max-fixed-arity","max-fixed-arity",(-690205543)),(3),new cljs.core.Keyword(null,"method-params","method-params",(-980792179)),cljs.core.list(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"comp","comp",(-1462482139),null),new cljs.core.Symbol(null,"container","container",(-96406180),null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"comp","comp",(-1462482139),null),new cljs.core.Symbol(null,"container","container",(-96406180),null),new cljs.core.Symbol(null,"callback","callback",(935395299),null)], null)),new cljs.core.Keyword(null,"arglists","arglists",(1661989754)),cljs.core.list(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"comp","comp",(-1462482139),null),new cljs.core.Symbol(null,"container","container",(-96406180),null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"comp","comp",(-1462482139),null),new cljs.core.Symbol(null,"container","container",(-96406180),null),new cljs.core.Symbol(null,"callback","callback",(935395299),null)], null)),new cljs.core.Keyword(null,"arglists-meta","arglists-meta",(1944829838)),cljs.core.list(null,null)], null),(1),(41),(41),cljs.core.list(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"comp","comp",(-1462482139),null),new cljs.core.Symbol(null,"container","container",(-96406180),null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"comp","comp",(-1462482139),null),new cljs.core.Symbol(null,"container","container",(-96406180),null),new cljs.core.Symbol(null,"callback","callback",(935395299),null)], null)),"Render a Reagent component into the DOM. The first argument may be\n  either a vector (using Reagent's Hiccup syntax), or a React element. The second argument should be a DOM node.\n\n  Optionally takes a callback that is called when the component is in place.\n\n  Returns the mounted component instance.",(cljs.core.truth_(reagent.dom.render)?reagent.dom.render.cljs$lang$test:null)])));})()
-;
-
-reagent.dom.render.cljs$core$IFn$_invoke$arity$2 = (function (comp,container){
-return reagent.dom.render.call(null,comp,container,null);
 });
 
-reagent.dom.render.cljs$core$IFn$_invoke$arity$3 = (function (comp,container,callback){
+(reagent.dom.render.cljs$core$IFn$_invoke$arity$2 = (function (comp,container){
+return reagent.dom.render.call(null,comp,container,reagent.impl.template.default_compiler);
+}));
+
+(reagent.dom.render.cljs$core$IFn$_invoke$arity$3 = (function (comp,container,callback_or_compiler){
 reagent.ratom.flush_BANG_.call(null);
 
+var vec__29 = ((cljs.core.fn_QMARK_.call(null,callback_or_compiler))?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [reagent.impl.template.default_compiler,callback_or_compiler], null):new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [callback_or_compiler,new cljs.core.Keyword(null,"callback","callback",(-705136228)).cljs$core$IFn$_invoke$arity$1(callback_or_compiler)], null));
+var compiler = cljs.core.nth.call(null,vec__29,(0),null);
+var callback = cljs.core.nth.call(null,vec__29,(1),null);
 var f = (function (){
-return reagent.impl.template.as_element.call(null,((cljs.core.fn_QMARK_.call(null,comp))?comp.call(null):comp));
+return reagent.impl.protocols.as_element.call(null,compiler,((cljs.core.fn_QMARK_.call(null,comp))?comp.call(null):comp));
 });
 return reagent.dom.render_comp.call(null,f,container,callback);
-});
+}));
 
-reagent.dom.render.cljs$lang$maxFixedArity = (3);
+(reagent.dom.render.cljs$lang$maxFixedArity = (3));
 
-new cljs.core.Var(function(){return reagent.dom.render;},new cljs.core.Symbol("reagent.dom","render","reagent.dom/render",(-1216356973),null),cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"ns","ns",(441598760)),new cljs.core.Keyword(null,"name","name",(1843675177)),new cljs.core.Keyword(null,"file","file",(-1269645878)),new cljs.core.Keyword(null,"end-column","end-column",(1425389514)),new cljs.core.Keyword(null,"top-fn","top-fn",(-2056129173)),new cljs.core.Keyword(null,"column","column",(2078222095)),new cljs.core.Keyword(null,"line","line",(212345235)),new cljs.core.Keyword(null,"end-line","end-line",(1837326455)),new cljs.core.Keyword(null,"arglists","arglists",(1661989754)),new cljs.core.Keyword(null,"doc","doc",(1913296891)),new cljs.core.Keyword(null,"test","test",(577538877))],[new cljs.core.Symbol(null,"reagent.dom","reagent.dom",(-2138920962),null),new cljs.core.Symbol(null,"render","render",(232498073),null),"reagent/dom.cljs",(13),new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"variadic","variadic",(882626057)),false,new cljs.core.Keyword(null,"max-fixed-arity","max-fixed-arity",(-690205543)),(3),new cljs.core.Keyword(null,"method-params","method-params",(-980792179)),cljs.core.list(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"comp","comp",(-1462482139),null),new cljs.core.Symbol(null,"container","container",(-96406180),null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"comp","comp",(-1462482139),null),new cljs.core.Symbol(null,"container","container",(-96406180),null),new cljs.core.Symbol(null,"callback","callback",(935395299),null)], null)),new cljs.core.Keyword(null,"arglists","arglists",(1661989754)),cljs.core.list(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"comp","comp",(-1462482139),null),new cljs.core.Symbol(null,"container","container",(-96406180),null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"comp","comp",(-1462482139),null),new cljs.core.Symbol(null,"container","container",(-96406180),null),new cljs.core.Symbol(null,"callback","callback",(935395299),null)], null)),new cljs.core.Keyword(null,"arglists-meta","arglists-meta",(1944829838)),cljs.core.list(null,null)], null),(1),(41),(41),cljs.core.list(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"comp","comp",(-1462482139),null),new cljs.core.Symbol(null,"container","container",(-96406180),null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"comp","comp",(-1462482139),null),new cljs.core.Symbol(null,"container","container",(-96406180),null),new cljs.core.Symbol(null,"callback","callback",(935395299),null)], null)),"Render a Reagent component into the DOM. The first argument may be\n  either a vector (using Reagent's Hiccup syntax), or a React element. The second argument should be a DOM node.\n\n  Optionally takes a callback that is called when the component is in place.\n\n  Returns the mounted component instance.",(cljs.core.truth_(reagent.dom.render)?reagent.dom.render.cljs$lang$test:null)]));
-(function (){
+/**
+ * Remove a component from the given DOM node.
+ */
 reagent.dom.unmount_component_at_node = (function reagent$dom$unmount_component_at_node(container){
 return reagent.dom.unmount_comp.call(null,container);
-}); return (
-new cljs.core.Var(function(){return reagent.dom.unmount_component_at_node;},new cljs.core.Symbol("reagent.dom","unmount-component-at-node","reagent.dom/unmount-component-at-node",(-401354396),null),cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"ns","ns",(441598760)),new cljs.core.Keyword(null,"name","name",(1843675177)),new cljs.core.Keyword(null,"file","file",(-1269645878)),new cljs.core.Keyword(null,"end-column","end-column",(1425389514)),new cljs.core.Keyword(null,"column","column",(2078222095)),new cljs.core.Keyword(null,"line","line",(212345235)),new cljs.core.Keyword(null,"end-line","end-line",(1837326455)),new cljs.core.Keyword(null,"arglists","arglists",(1661989754)),new cljs.core.Keyword(null,"doc","doc",(1913296891)),new cljs.core.Keyword(null,"test","test",(577538877))],[new cljs.core.Symbol(null,"reagent.dom","reagent.dom",(-2138920962),null),new cljs.core.Symbol(null,"unmount-component-at-node","unmount-component-at-node",(939521902),null),"reagent/dom.cljs",(32),(1),(56),(56),cljs.core.list(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"container","container",(-96406180),null)], null)),null,(cljs.core.truth_(reagent.dom.unmount_component_at_node)?reagent.dom.unmount_component_at_node.cljs$lang$test:null)])));})()
-;
+});
 /**
  * Returns the root DOM node of a mounted component.
  */
-(function (){
 reagent.dom.dom_node = (function reagent$dom$dom_node(this$){
-return (reagent.dom.module.call(null)["findDOMNode"])(this$);
-}); return (
-new cljs.core.Var(function(){return reagent.dom.dom_node;},new cljs.core.Symbol("reagent.dom","dom-node","reagent.dom/dom-node",(-1251855976),null),cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"ns","ns",(441598760)),new cljs.core.Keyword(null,"name","name",(1843675177)),new cljs.core.Keyword(null,"file","file",(-1269645878)),new cljs.core.Keyword(null,"end-column","end-column",(1425389514)),new cljs.core.Keyword(null,"column","column",(2078222095)),new cljs.core.Keyword(null,"line","line",(212345235)),new cljs.core.Keyword(null,"end-line","end-line",(1837326455)),new cljs.core.Keyword(null,"arglists","arglists",(1661989754)),new cljs.core.Keyword(null,"doc","doc",(1913296891)),new cljs.core.Keyword(null,"test","test",(577538877))],[new cljs.core.Symbol(null,"reagent.dom","reagent.dom",(-2138920962),null),new cljs.core.Symbol(null,"dom-node","dom-node",(2092815254),null),"reagent/dom.cljs",(15),(1),(59),(59),cljs.core.list(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"this","this",(1028897902),null)], null)),"Returns the root DOM node of a mounted component.",(cljs.core.truth_(reagent.dom.dom_node)?reagent.dom.dom_node.cljs$lang$test:null)])));})()
-;
-reagent.impl.template.find_dom_node = reagent.dom.dom_node;
+return react_dom.findDOMNode.call(null,this$);
+});
 /**
  * Force re-rendering of all mounted Reagent components. This is
  *   probably only useful in a development environment, when you want to
@@ -163,55 +102,60 @@ reagent.impl.template.find_dom_node = reagent.dom.dom_node;
  *   ClojureScript). To get around this you'll have to introduce a layer
  *   of indirection, for example by using `(render [#'foo])` instead.
  */
-(function (){
 reagent.dom.force_update_all = (function reagent$dom$force_update_all(){
 reagent.ratom.flush_BANG_.call(null);
 
-var seq__393_397 = cljs.core.seq.call(null,cljs.core.vals.call(null,cljs.core.deref.call(null,reagent.dom.roots)));
-var chunk__394_398 = null;
-var count__395_399 = (0);
-var i__396_400 = (0);
+var seq__33_49 = cljs.core.seq.call(null,cljs.core.deref.call(null,reagent.dom.roots));
+var chunk__34_50 = null;
+var count__35_51 = (0);
+var i__36_52 = (0);
 while(true){
-if((i__396_400 < count__395_399)){
-var v_401 = cljs.core._nth.call(null,chunk__394_398,i__396_400);
-cljs.core.apply.call(null,reagent.dom.re_render_component,v_401);
+if((i__36_52 < count__35_51)){
+var vec__43_53 = cljs.core._nth.call(null,chunk__34_50,i__36_52);
+var container_54 = cljs.core.nth.call(null,vec__43_53,(0),null);
+var comp_55 = cljs.core.nth.call(null,vec__43_53,(1),null);
+reagent.dom.re_render_component.call(null,comp_55,container_54);
 
-var G__402 = seq__393_397;
-var G__403 = chunk__394_398;
-var G__404 = count__395_399;
-var G__405 = (i__396_400 + (1));
-seq__393_397 = G__402;
-chunk__394_398 = G__403;
-count__395_399 = G__404;
-i__396_400 = G__405;
+
+var G__56 = seq__33_49;
+var G__57 = chunk__34_50;
+var G__58 = count__35_51;
+var G__59 = (i__36_52 + (1));
+seq__33_49 = G__56;
+chunk__34_50 = G__57;
+count__35_51 = G__58;
+i__36_52 = G__59;
 continue;
 } else {
-var temp__19834__auto___406 = cljs.core.seq.call(null,seq__393_397);
-if(temp__19834__auto___406){
-var seq__393_407__$1 = temp__19834__auto___406;
-if(cljs.core.chunked_seq_QMARK_.call(null,seq__393_407__$1)){
-var c__23363__auto___408 = cljs.core.chunk_first.call(null,seq__393_407__$1);
-var G__409 = cljs.core.chunk_rest.call(null,seq__393_407__$1);
-var G__410 = c__23363__auto___408;
-var G__411 = cljs.core.count.call(null,c__23363__auto___408);
-var G__412 = (0);
-seq__393_397 = G__409;
-chunk__394_398 = G__410;
-count__395_399 = G__411;
-i__396_400 = G__412;
+var temp__9522__auto___60 = cljs.core.seq.call(null,seq__33_49);
+if(temp__9522__auto___60){
+var seq__33_61__$1 = temp__9522__auto___60;
+if(cljs.core.chunked_seq_QMARK_.call(null,seq__33_61__$1)){
+var c__12122__auto___62 = cljs.core.chunk_first.call(null,seq__33_61__$1);
+var G__63 = cljs.core.chunk_rest.call(null,seq__33_61__$1);
+var G__64 = c__12122__auto___62;
+var G__65 = cljs.core.count.call(null,c__12122__auto___62);
+var G__66 = (0);
+seq__33_49 = G__63;
+chunk__34_50 = G__64;
+count__35_51 = G__65;
+i__36_52 = G__66;
 continue;
 } else {
-var v_413 = cljs.core.first.call(null,seq__393_407__$1);
-cljs.core.apply.call(null,reagent.dom.re_render_component,v_413);
+var vec__46_67 = cljs.core.first.call(null,seq__33_61__$1);
+var container_68 = cljs.core.nth.call(null,vec__46_67,(0),null);
+var comp_69 = cljs.core.nth.call(null,vec__46_67,(1),null);
+reagent.dom.re_render_component.call(null,comp_69,container_68);
 
-var G__414 = cljs.core.next.call(null,seq__393_407__$1);
-var G__415 = null;
-var G__416 = (0);
-var G__417 = (0);
-seq__393_397 = G__414;
-chunk__394_398 = G__415;
-count__395_399 = G__416;
-i__396_400 = G__417;
+
+var G__70 = cljs.core.next.call(null,seq__33_61__$1);
+var G__71 = null;
+var G__72 = (0);
+var G__73 = (0);
+seq__33_49 = G__70;
+chunk__34_50 = G__71;
+count__35_51 = G__72;
+i__36_52 = G__73;
 continue;
 }
 } else {
@@ -220,7 +164,8 @@ continue;
 break;
 }
 
-return "Updated";
-}); return (
-new cljs.core.Var(function(){return reagent.dom.force_update_all;},new cljs.core.Symbol("reagent.dom","force-update-all","reagent.dom/force-update-all",(519296605),null),cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"ns","ns",(441598760)),new cljs.core.Keyword(null,"name","name",(1843675177)),new cljs.core.Keyword(null,"file","file",(-1269645878)),new cljs.core.Keyword(null,"end-column","end-column",(1425389514)),new cljs.core.Keyword(null,"column","column",(2078222095)),new cljs.core.Keyword(null,"line","line",(212345235)),new cljs.core.Keyword(null,"end-line","end-line",(1837326455)),new cljs.core.Keyword(null,"arglists","arglists",(1661989754)),new cljs.core.Keyword(null,"doc","doc",(1913296891)),new cljs.core.Keyword(null,"test","test",(577538877))],[new cljs.core.Symbol(null,"reagent.dom","reagent.dom",(-2138920962),null),new cljs.core.Symbol(null,"force-update-all","force-update-all",(1197469763),null),"reagent/dom.cljs",(23),(1),(66),(66),cljs.core.list(cljs.core.PersistentVector.EMPTY),"Force re-rendering of all mounted Reagent components. This is\n  probably only useful in a development environment, when you want to\n  update components in response to some dynamic changes to code.\n\n  Note that force-update-all may not update root components. This\n  happens if a component 'foo' is mounted with `(render [foo])` (since\n  functions are passed by value, and not by reference, in\n  ClojureScript). To get around this you'll have to introduce a layer\n  of indirection, for example by using `(render [#'foo])` instead.",(cljs.core.truth_(reagent.dom.force_update_all)?reagent.dom.force_update_all.cljs$lang$test:null)])));})()
-;
+return reagent.impl.batching.flush_after_render.call(null);
+});
+
+//# sourceURL=reagent/dom.js
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicmVhZ2VudC9kb20uanMiLCJzb3VyY2VzIjpbImRvbS5jbGpzIl0sImxpbmVDb3VudCI6MTcwLCJtYXBwaW5ncyI6IjtBQVNBLEdBQUEsUUFBQUEsb0NBQUFDLHdDQUFBQztBQUFBO0FBQUEsQUFBQSxBQUFtQkMsb0JBQU0seUJBQUEsekJBQUNDOztBQUUxQiwyQkFBQSwzQkFBT0MsOERBQWNDO0FBQXJCLEFBQ0UsQUFBQ0MsK0JBQU1KLGtCQUFNSyxpQkFBT0Y7O0FBQ3BCLE9BQUNHLDJDQUFpQ0g7O0FBRXBDLDBCQUFBLDFCQUFPSSw0REFBYUMsS0FBS0wsVUFBVU07QUFBbkMsQUFDRSxJQUFBQyx5Q0FBVUU7SUFBVkQseUNBQUE7QUFBQSxBQUFBLCtDQUFBQSw5Q0FBVUM7O0FBQVYsSUFBQSxBQUNFLE9BQUNDLDJCQUFpQixBQUFDTCxnQkFBTUwsVUFDdkI7QUFBQSxBQUNFLElBQUFXLHlDQUFVRjtJQUFWRyx5Q0FBQTtBQUFBLEFBQUEsK0NBQUFBLDlDQUFVSDs7QUFBVixJQUFBLEFBQ0UsQUFBQ1IsK0JBQU1KLGtCQUFNZ0IsZ0JBQU1iLFVBQVVLOztBQUM3QixBQUFDUzs7QUFDRCxHQUFJLEdBQUEsYUFBQSxaQUFPUjtBQUNULE9BQUNBOztBQURIOztVQUhGLEFBQUEsK0NBQUFLLDlDQUFVRjs7VUFIaEIsQUFBQSwrQ0FBQUYsOUNBQVVFOztBQVNaLGtDQUFBLGxDQUFPTSw0RUFBcUJWLEtBQUtMO0FBQWpDLEFBQ0Usd0RBQUEsakRBQUNJLGtDQUFZQyxLQUFLTDs7QUFFcEIsQUFBQTs7Ozs7Ozs7O3FCQUFBLDZCQUFBZ0IsbERBQU1FO0FBQU4sQUFBQSxJQUFBRCxRQUFBLEFBQUE7QUFBQSxBQUFBLFFBQUFBO0tBQUE7QUFBQSxPQUFBQyxpREFBQSxDQUFBLFVBQUEsTUFBQSxDQUFBLFVBQUE7OztLQUFBO0FBQUEsT0FBQUEsaURBQUEsQ0FBQSxVQUFBLE1BQUEsQ0FBQSxVQUFBLE1BQUEsQ0FBQSxVQUFBOzs7O0FBQUEsTUFBQSxLQUFBQyxNQUFBLENBQUEsOERBQUEsQUFBQTs7Ozs7QUFBQSxDQUFBLG1EQUFBLG5EQUFNRCw4REFRRmIsS0FBS0w7QUFSVCxBQVNHLE9BQUNrQiw2QkFBT2IsS0FBS0wsVUFBVW9COzs7QUFUMUIsQ0FBQSxtREFBQSxuREFBTUYsOERBVUZiLEtBQUtMLFVBQVVxQjtBQVZuQixBQVdHLEFBQUNDOztBQUNELElBQUFDLFVBQTBCLHVEQUFBLHVKQUFBLDVNQUFJLEFBQUNHLDhCQUFJTCwwR0FDTkQsdUNBQXNCQyxnSEFHdEJBLHFCQUFxQixBQUFBLDZGQUFXQTtlQUo3RCxBQUFBRyx3QkFBQUQsUUFBQSxJQUFBLC9DQUFPRTtlQUFQLEFBQUFELHdCQUFBRCxRQUFBLElBQUEsL0NBQWdCakI7SUFLVnFCLElBQUU7QUFBQSxBQUNFLE9BQUNDLDRDQUFhSCxTQUFTLEVBQUksQUFBQ0MsOEJBQUlyQixPQUFNLEFBQUNBLGdCQUFNQTs7QUFOdkQsQUFPRSxPQUFDRCxrQ0FBWXVCLEVBQUUzQixVQUFVTTs7O0FBbkI5QixDQUFBLDZDQUFBLDdDQUFNWTs7QUFBTixBQXFCQTs7O3dDQUFBLHhDQUFNVyx3RkFFSDdCO0FBRkgsQUFHRSxPQUFDRCxtQ0FBYUM7O0FBRWhCOzs7dUJBQUEsdkJBQU04QixzREFFSEM7QUFGSCxBQUdFLE9BQUNDLGdDQUFzQkQ7O0FBRXpCOzs7Ozs7Ozs7OzsrQkFBQSwvQkFBTUU7QUFBTixBQVdFLEFBQUNYOztBQUNELElBQUFZLGFBQUEsQUFBQUMsd0JBQUEsQUFBQUMsMEJBQTBCdkM7SUFBMUJ3QyxlQUFBO0lBQUFDLGVBQUE7SUFBQUMsV0FBQTs7QUFBQSxBQUFBLEdBQUEsQUFBQSxDQUFBQSxXQUFBRDtBQUFBLElBQUFFLGFBQUEsQUFBQUMseUJBQUFKLGFBQUFFO21CQUFBLEFBQUFmLHdCQUFBZ0IsV0FBQSxJQUFBLHREQUFTeEM7Y0FBVCxBQUFBd0Isd0JBQUFnQixXQUFBLElBQUEsakRBQW1CbkM7QUFBbkIsQUFBQSxBQUNFLEFBQUNVLDBDQUFvQlYsUUFBS0w7O0FBRDVCO0FBQUEsWUFBQWtDO1lBQUFHO1lBQUFDO1lBQUEsQ0FBQUMsV0FBQTs7Ozs7OztBQUFBLElBQUFHLHdCQUFBLEFBQUFQLHdCQUFBRDtBQUFBLEFBQUEsR0FBQVE7QUFBQSxBQUFBLElBQUFSLGlCQUFBUTtBQUFBLEFBQUEsR0FBQSxBQUFBQyx1Q0FBQVQ7QUFBQSxJQUFBVSxzQkFBQSxBQUFBQyxnQ0FBQVg7QUFBQSxBQUFBLFlBQUEsQUFBQVksK0JBQUFaO1lBQUFVO1lBQUEsQUFBQUcsMEJBQUFIO1lBQUE7Ozs7Ozs7QUFBQSxJQUFBSSxhQUFBLEFBQUFDLDBCQUFBZjttQkFBQSxBQUFBVix3QkFBQXdCLFdBQUEsSUFBQSx0REFBU2hEO2NBQVQsQUFBQXdCLHdCQUFBd0IsV0FBQSxJQUFBLGpEQUFtQjNDO0FBQW5CLEFBQUEsQUFDRSxBQUFDVSwwQ0FBb0JWLFFBQUtMOztBQUQ1QjtBQUFBLFlBQUEsQUFBQWtELHlCQUFBaEI7WUFBQTtZQUFBO1lBQUE7Ozs7Ozs7O0FBQUE7Ozs7O0FBRUEsT0FBQ3BCIiwibmFtZXMiOlsianMvcmVhZ2VudCIsImpzL3JlYWdlbnQuZG9tIiwianMvcmVhZ2VudC5kb20ucm9vdHMiLCJyZWFnZW50LmRvbS9yb290cyIsImNsanMuY29yZS9hdG9tIiwicmVhZ2VudC5kb20vdW5tb3VudC1jb21wIiwiY29udGFpbmVyIiwiY2xqcy5jb3JlL3N3YXAhIiwiY2xqcy5jb3JlL2Rpc3NvYyIsInJlYWN0LWRvbS91bm1vdW50Q29tcG9uZW50QXROb2RlIiwicmVhZ2VudC5kb20vcmVuZGVyLWNvbXAiLCJjb21wIiwiY2FsbGJhY2siLCIqYWx3YXlzLXVwZGF0ZSotb3JpZy12YWxfXzIzIiwiKmFsd2F5cy11cGRhdGUqLXRlbXAtdmFsX18yNCIsInJlYWdlbnQuaW1wbC51dGlsLyphbHdheXMtdXBkYXRlKiIsInJlYWN0LWRvbS9yZW5kZXIiLCIqYWx3YXlzLXVwZGF0ZSotb3JpZy12YWxfXzI1IiwiKmFsd2F5cy11cGRhdGUqLXRlbXAtdmFsX18yNiIsImNsanMuY29yZS9hc3NvYyIsInJlYWdlbnQuaW1wbC5iYXRjaGluZy9mbHVzaC1hZnRlci1yZW5kZXIiLCJyZWFnZW50LmRvbS9yZS1yZW5kZXItY29tcG9uZW50IiwidmFyX2FyZ3MiLCJHX18yOCIsInJlYWdlbnQuZG9tL3JlbmRlciIsImpzL0Vycm9yIiwicmVhZ2VudC5pbXBsLnRlbXBsYXRlL2RlZmF1bHQtY29tcGlsZXIiLCJjYWxsYmFjay1vci1jb21waWxlciIsInJlYWdlbnQucmF0b20vZmx1c2ghIiwidmVjX18yOSIsImNsanMuY29yZS9udGgiLCJjb21waWxlciIsImNsanMuY29yZS9mbj8iLCJmIiwicmVhZ2VudC5pbXBsLnByb3RvY29scy9hcy1lbGVtZW50IiwicmVhZ2VudC5kb20vdW5tb3VudC1jb21wb25lbnQtYXQtbm9kZSIsInJlYWdlbnQuZG9tL2RvbS1ub2RlIiwidGhpcyIsInJlYWN0LWRvbS9maW5kRE9NTm9kZSIsInJlYWdlbnQuZG9tL2ZvcmNlLXVwZGF0ZS1hbGwiLCJzZXFfXzMzIiwiY2xqcy5jb3JlL3NlcSIsImNsanMuY29yZS9kZXJlZiIsImNodW5rX18zNCIsImNvdW50X18zNSIsImlfXzM2IiwidmVjX180MyIsImNsanMuY29yZS8tbnRoIiwidGVtcF9fOTUyMl9fYXV0b19fIiwiY2xqcy5jb3JlL2NodW5rZWQtc2VxPyIsImNfXzEyMTIyX19hdXRvX18iLCJjbGpzLmNvcmUvY2h1bmstZmlyc3QiLCJjbGpzLmNvcmUvY2h1bmstcmVzdCIsImNsanMuY29yZS9jb3VudCIsInZlY19fNDYiLCJjbGpzLmNvcmUvZmlyc3QiLCJjbGpzLmNvcmUvbmV4dCJdLCJzb3VyY2VzQ29udGVudCI6WyIobnMgcmVhZ2VudC5kb21cbiAgKDpyZXF1aXJlIFtyZWFjdC1kb20gOmFzIHJlYWN0LWRvbV1cbiAgICAgICAgICAgIFtyZWFnZW50LmltcGwudXRpbCA6YXMgdXRpbF1cbiAgICAgICAgICAgIFtyZWFnZW50LmltcGwudGVtcGxhdGUgOmFzIHRtcGxdXG4gICAgICAgICAgICBbcmVhZ2VudC5pbXBsLmlucHV0IDphcyBpbnB1dF1cbiAgICAgICAgICAgIFtyZWFnZW50LmltcGwuYmF0Y2hpbmcgOmFzIGJhdGNoXVxuICAgICAgICAgICAgW3JlYWdlbnQuaW1wbC5wcm90b2NvbHMgOmFzIHBdXG4gICAgICAgICAgICBbcmVhZ2VudC5yYXRvbSA6YXMgcmF0b21dKSlcblxuKGRlZm9uY2UgXjpwcml2YXRlIHJvb3RzIChhdG9tIHt9KSlcblxuKGRlZm4tIHVubW91bnQtY29tcCBbY29udGFpbmVyXVxuICAoc3dhcCEgcm9vdHMgZGlzc29jIGNvbnRhaW5lcilcbiAgKHJlYWN0LWRvbS91bm1vdW50Q29tcG9uZW50QXROb2RlIGNvbnRhaW5lcikpXG5cbihkZWZuLSByZW5kZXItY29tcCBbY29tcCBjb250YWluZXIgY2FsbGJhY2tdXG4gIChiaW5kaW5nIFt1dGlsLyphbHdheXMtdXBkYXRlKiB0cnVlXVxuICAgIChyZWFjdC1kb20vcmVuZGVyIChjb21wKSBjb250YWluZXJcbiAgICAgIChmbiBbXVxuICAgICAgICAoYmluZGluZyBbdXRpbC8qYWx3YXlzLXVwZGF0ZSogZmFsc2VdXG4gICAgICAgICAgKHN3YXAhIHJvb3RzIGFzc29jIGNvbnRhaW5lciBjb21wKVxuICAgICAgICAgIChiYXRjaC9mbHVzaC1hZnRlci1yZW5kZXIpXG4gICAgICAgICAgKGlmIChzb21lPyBjYWxsYmFjaylcbiAgICAgICAgICAgIChjYWxsYmFjaykpKSkpKSlcblxuKGRlZm4tIHJlLXJlbmRlci1jb21wb25lbnQgW2NvbXAgY29udGFpbmVyXVxuICAocmVuZGVyLWNvbXAgY29tcCBjb250YWluZXIgbmlsKSlcblxuKGRlZm4gcmVuZGVyXG4gIFwiUmVuZGVyIGEgUmVhZ2VudCBjb21wb25lbnQgaW50byB0aGUgRE9NLiBUaGUgZmlyc3QgYXJndW1lbnQgbWF5IGJlXG4gIGVpdGhlciBhIHZlY3RvciAodXNpbmcgUmVhZ2VudCdzIEhpY2N1cCBzeW50YXgpLCBvciBhIFJlYWN0IGVsZW1lbnQuXG4gIFRoZSBzZWNvbmQgYXJndW1lbnQgc2hvdWxkIGJlIGEgRE9NIG5vZGUuXG5cbiAgT3B0aW9uYWxseSB0YWtlcyBhIGNhbGxiYWNrIHRoYXQgaXMgY2FsbGVkIHdoZW4gdGhlIGNvbXBvbmVudCBpcyBpbiBwbGFjZS5cblxuICBSZXR1cm5zIHRoZSBtb3VudGVkIGNvbXBvbmVudCBpbnN0YW5jZS5cIlxuICAoW2NvbXAgY29udGFpbmVyXVxuICAgKHJlbmRlciBjb21wIGNvbnRhaW5lciB0bXBsL2RlZmF1bHQtY29tcGlsZXIpKVxuICAoW2NvbXAgY29udGFpbmVyIGNhbGxiYWNrLW9yLWNvbXBpbGVyXVxuICAgKHJhdG9tL2ZsdXNoISlcbiAgIChsZXQgW1tjb21waWxlciBjYWxsYmFja10gKGlmIChmbj8gY2FsbGJhY2stb3ItY29tcGlsZXIpXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgW3RtcGwvZGVmYXVsdC1jb21waWxlciBjYWxsYmFjay1vci1jb21waWxlcl1cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA7OyBUT0RPOiBDYWxsYmFjayBvcHRpb24gZG9lc24ndCBtYWtlIHNlbnNlIG5vdyB0aGF0XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgOzsgdmFsIGlzIGNvbXBpbGVyIG9iamVjdCwgbm90IG1hcC5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBbY2FsbGJhY2stb3ItY29tcGlsZXIgKDpjYWxsYmFjayBjYWxsYmFjay1vci1jb21waWxlcildKVxuICAgICAgICAgZiAoZm4gW11cbiAgICAgICAgICAgICAocC9hcy1lbGVtZW50IGNvbXBpbGVyIChpZiAoZm4/IGNvbXApIChjb21wKSBjb21wKSkpXVxuICAgICAocmVuZGVyLWNvbXAgZiBjb250YWluZXIgY2FsbGJhY2spKSkpXG5cbihkZWZuIHVubW91bnQtY29tcG9uZW50LWF0LW5vZGVcbiAgXCJSZW1vdmUgYSBjb21wb25lbnQgZnJvbSB0aGUgZ2l2ZW4gRE9NIG5vZGUuXCJcbiAgW2NvbnRhaW5lcl1cbiAgKHVubW91bnQtY29tcCBjb250YWluZXIpKVxuXG4oZGVmbiBkb20tbm9kZVxuICBcIlJldHVybnMgdGhlIHJvb3QgRE9NIG5vZGUgb2YgYSBtb3VudGVkIGNvbXBvbmVudC5cIlxuICBbdGhpc11cbiAgKHJlYWN0LWRvbS9maW5kRE9NTm9kZSB0aGlzKSlcblxuKGRlZm4gZm9yY2UtdXBkYXRlLWFsbFxuICBcIkZvcmNlIHJlLXJlbmRlcmluZyBvZiBhbGwgbW91bnRlZCBSZWFnZW50IGNvbXBvbmVudHMuIFRoaXMgaXNcbiAgcHJvYmFibHkgb25seSB1c2VmdWwgaW4gYSBkZXZlbG9wbWVudCBlbnZpcm9ubWVudCwgd2hlbiB5b3Ugd2FudCB0b1xuICB1cGRhdGUgY29tcG9uZW50cyBpbiByZXNwb25zZSB0byBzb21lIGR5bmFtaWMgY2hhbmdlcyB0byBjb2RlLlxuXG4gIE5vdGUgdGhhdCBmb3JjZS11cGRhdGUtYWxsIG1heSBub3QgdXBkYXRlIHJvb3QgY29tcG9uZW50cy4gVGhpc1xuICBoYXBwZW5zIGlmIGEgY29tcG9uZW50ICdmb28nIGlzIG1vdW50ZWQgd2l0aCBgKHJlbmRlciBbZm9vXSlgIChzaW5jZVxuICBmdW5jdGlvbnMgYXJlIHBhc3NlZCBieSB2YWx1ZSwgYW5kIG5vdCBieSByZWZlcmVuY2UsIGluXG4gIENsb2p1cmVTY3JpcHQpLiBUbyBnZXQgYXJvdW5kIHRoaXMgeW91J2xsIGhhdmUgdG8gaW50cm9kdWNlIGEgbGF5ZXJcbiAgb2YgaW5kaXJlY3Rpb24sIGZvciBleGFtcGxlIGJ5IHVzaW5nIGAocmVuZGVyIFsjJ2Zvb10pYCBpbnN0ZWFkLlwiXG4gIFtdXG4gIChyYXRvbS9mbHVzaCEpXG4gIChkb3NlcSBbW2NvbnRhaW5lciBjb21wXSBAcm9vdHNdXG4gICAgKHJlLXJlbmRlci1jb21wb25lbnQgY29tcCBjb250YWluZXIpKVxuICAoYmF0Y2gvZmx1c2gtYWZ0ZXItcmVuZGVyKSlcbiJdfQ==
