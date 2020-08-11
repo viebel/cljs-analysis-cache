@@ -17,7 +17,7 @@
                  [com.andrewmcveigh/cljs-time "0.5.0"]
                  [org.clojure/test.check "0.10.0-alpha3"]
                  ;[org.clojure/core.match "0.3.0-self-host"]
-                 [viebel/reagent "0.6.2"]
+                 [reagent "1.0.0-alpha2"]
                  [viebel/poppea "0.2.1"]
                  [expound "0.7.1"] 
                  ;[org.clojure/math.combinatorics "0.1.3"]
