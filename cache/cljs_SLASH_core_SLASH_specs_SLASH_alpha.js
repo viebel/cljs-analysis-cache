@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 1.10.439
+// Compiled by ClojureScript 1.10.597
 goog.provide("cljs.core.specs.alpha");
 
 //# sourceURL=cljs/core/specs/alpha.js

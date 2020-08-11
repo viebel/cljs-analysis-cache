@@ -3,6 +3,7 @@
   :local-repo "local-m2"
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/clojurescript "1.10.516"]
+                 [org.clojure/core.specs.alpha "0.2.44"]
                  [cljs-bean "1.5.0"]
                  [andare "0.4.0"]
                  [viebel/hoquet "0.0.1"]
