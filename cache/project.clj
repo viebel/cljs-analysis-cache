@@ -9,6 +9,7 @@
 		 [cljsjs/react-dom "16.13.1-0"]
                  [andare "1.1.587"] ;; A fork of core.async ported for use with self-hosted ClojureScript.
                  [viebel/hoquet "0.0.3"]
+	         [viebel/hicada "0.1.8"]
                  [cljs-http "0.1.42" :exclusions [org.clojure/core.async]] ;; core.async is provided by andare
                  [viebel/gadjett "0.5.9":exclusions [org.clojure/core.async]] ;; core.async is provided by andare
                  [viebel/klipse-clj "10.1.3"]
