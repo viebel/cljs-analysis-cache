@@ -11,7 +11,7 @@
                  [viebel/hoquet "0.0.3"]
 	         [viebel/hicada "0.1.8"]
                  [cljs-http "0.1.42" :exclusions [org.clojure/core.async]] ;; core.async is provided by andare
-                 [viebel/gadjett "0.5.9":exclusions [org.clojure/core.async]] ;; core.async is provided by andare
+                 [viebel/gadjett "0.5.9" :exclusions [org.clojure/core.async org.clojure/core.match]] ;; core.async is provided by andare, core.match is provided by abbinare
                  [viebel/klipse-clj "10.1.3"]
                  [org.omcljs/om "1.0.0-alpha47"]
                  [com.cemerick/url "0.1.1"]
@@ -20,7 +20,7 @@
                  [viebel/http-fx "0.1.4-SNAPSHOT" :exclusions [reagent]]
                  [com.andrewmcveigh/cljs-time "0.5.0"]
                  [org.clojure/test.check "0.10.0-alpha3"]
-                 ;[org.clojure/core.match "0.3.0-self-host"]
+                 [viebel/abbinare "1.10.597"]
                  [viebel/reagent "1.0.0-alpha2"]
                  [viebel/poppea "0.2.1"]
                  [expound "0.7.1"] 
