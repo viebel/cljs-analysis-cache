@@ -2,5 +2,5 @@
  :builds {:analysis-cache {:target :bootstrap
                            :output-dir "out"
                            :exclude #{cljs.js}
-                           :entries [cljs.spec.alpha]
+                           :entries [clojure.test cljs.spec.test.alpha cljs.spec.alpha]
                            :macros []}}}

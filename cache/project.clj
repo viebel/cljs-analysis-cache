@@ -5,11 +5,11 @@
                  [org.clojure/clojurescript "1.10.597"]
                  [org.clojure/core.specs.alpha "0.2.44"]
                  [cljs-bean "1.5.0"]
-		 [cljsjs/react "16.13.1-0"]
-		 [cljsjs/react-dom "16.13.1-0"]
+		             [cljsjs/react "16.13.1-0"]
+		             [cljsjs/react-dom "16.13.1-0"]
                  [andare "1.1.587"] ;; A fork of core.async ported for use with self-hosted ClojureScript.
                  [viebel/hoquet "0.0.3"]
-	         [viebel/hicada "0.1.8"]
+	               [viebel/hicada "0.1.8"]
                  [cljs-http "0.1.42" :exclusions [org.clojure/core.async]] ;; core.async is provided by andare
                  [viebel/gadjett "0.5.9" :exclusions [org.clojure/core.async org.clojure/core.match]] ;; core.async is provided by andare, core.match is provided by abbinare
                  [viebel/klipse-clj "10.1.3"]
