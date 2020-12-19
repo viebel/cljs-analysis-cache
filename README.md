@@ -1,42 +1,18 @@
-## Update clojurescript analysis cache
+## Update ClojureScript analysis cache
 
-Analysis cache and macro precompiled files are stored under `docs/cache-cljs`.
+Analysis cache and macro precompiled files are stored under `/cache`.
 
-The cache files are generated with `lumo` or `planck`.
+The cache files are generated with `shadow-cljs`.
 
-There are two kind of namespaces:
+You need to add the dependencies and the namespaces in `cache-shadow/shadow-cljs.edn` and run from the **cache-shadow**
 
-1. namespaces bundled in lumo e.g `cljs.test`, `cljs.spec`
-2. namepsaces not bundled in lumo e.g. `om.next`, `reagent`
+1. `cd cache-shadow`
+1. Run `./update-cache` to generate the files and copy them to `./cache` folder
+1. Commit `./cache` to master branch
+1. Push master branch github will make the files available  through github pages mechanism at https://viebel.github.io/cljs-analysis-cache/cache/
 
-For #1, you need to add the namespace in `generate-clojure-spec-cache.cljs` and run from the **root folder**
+`shadow-cljs` is able to generate analysis cache as it is explained [here](https://code.thheller.com/blog/shadow-cljs/2017/10/14/bootstrap-support.html), and the code is [here](https://github.com/thheller/shadow-cljs/blob/master/src/main/shadow/build/targets/bootstrap.clj#L153-L170)
 
-```bash
-lumo generate-clojure-spec-cache.cljs
 
-```
 
-For #2, you need to:
 
-1. `cd cache`
-
-2. add the new dependency in `project.clj`
-
-3. run `lein deps`
-
-4. open lumo/planck with the appropriate cache folder and class path:
-
-```bash
-export cp=`lein classpath`
-planck -k . -c $cp
-```
-
-5. inside lumo, you need to require your namespaces, and the cache will be stored under `docs/cache-cljs` e.g.:
-
-```bash
-cljs.user=> (require 'clojure.test.check)
-```
-
-6. commit `/cache` to master branch
-
-7. push master branch

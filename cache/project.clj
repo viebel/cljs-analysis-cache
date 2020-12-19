@@ -17,7 +17,9 @@
                  [com.cemerick/url "0.1.1"]
                  [rewrite-cljs "0.4.3"]
                  [viebel/re-frame "0.9.3-SNAPSHOT" :exclusions [reagent]]
-                 [viebel/http-fx "0.1.4-SNAPSHOT" :exclusions [reagent]]
+
+
+[viebel/http-fx "0.1.4-SNAPSHOT" :exclusions [reagent]]
                  [com.andrewmcveigh/cljs-time "0.5.0"]
                  [org.clojure/test.check "0.10.0-alpha3"]
                  [viebel/abbinare "1.10.597"]

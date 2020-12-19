@@ -1,8 +1,0 @@
-{:dependencies [[org.clojure/tools.reader "1.3.2"]]
- :source-paths ["src"]
- :builds {:analysis-cache {:target :bootstrap
-                           :output-dir "out"
-                           :exclude #{cljs.js}
-                           :entries [cljs.test clojure.test.check cljs.pprint cljs.analyzer
-                                     cljs.spec.alpha cljs.spec.test.alpha cljs.spec.gen.alpha]
-                           :macros [clojure.template cljs.env.macros cljs.compiler.macros]}}}
