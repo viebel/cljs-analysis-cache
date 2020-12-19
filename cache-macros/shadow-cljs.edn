@@ -1,4 +1,5 @@
-{:source-paths ["src"]
+{:dependencies [[org.clojure/tools.reader "1.3.2"]]
+ :source-paths ["src"]
  :builds {:analysis-cache {:target :bootstrap
                            :output-dir "out"
                            :exclude #{cljs.js}
