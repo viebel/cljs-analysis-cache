@@ -1,31 +1,6 @@
-{
- :source-paths
- ["src"]
- 
- :builds
- {:bootstrap-host
-  {:target :browser
-
-   :output-dir "out/demo-selfhost/public/simple/js"
-   :asset-path "/simple/js"
-
-   :compiler-options
-   {:optimizations :simple
-    :output-wrapper false}
-
-   :modules
-   {:base
-    {:entries [demo.selfhost.simple]}}
-
-   :devtools
-   {:http-root "out/demo-selfhost/public"
-    :http-port 8700
-    :before-load demo.selfhost.simple/stop
-    :after-load demo.selfhost.simple/start}}
-  
-  :bootstrap-support
-  {:target :bootstrap
-   :output-dir "out/demo-selfhost/public/bootstrap"
-   :exclude #{cljs.js}
-   :entries [demo.selfhost.many cljs.js #_demo.macro cljs.spec.alpha]
-   :macros []}}}}
+{:source-paths ["src"]
+ :builds {:analysis-cache {:target :bootstrap
+                           :output-dir "out"
+                           :exclude #{cljs.js}
+                           :entries [#_demo.selfhost.many cljs.spec.alpha]
+                           :macros [cljs.spec.alpha]}}}
