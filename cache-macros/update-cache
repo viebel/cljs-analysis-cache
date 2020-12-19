@@ -1,3 +1,5 @@
+set -e # exit on error
+
 yarn run shadow-cljs compile analysis-cache
 
 echo "Copy files to the cache folder"
