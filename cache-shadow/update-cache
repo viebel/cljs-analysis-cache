@@ -3,4 +3,4 @@ set -e # exit on error
 yarn run shadow-cljs compile analysis-cache
 
 echo "Copy files to the cache folder"
-for x in `find out -type f | grep '$macros' | grep -E '(cljs|clojure).*\\$macros.*\.(json|js)$'`;do y=`sed 's/transit\.json$/cache.json/;s/\./_SLASH_/g;s/_SLASH_cache_SLASH_json$/.cache.json/;s/macros_SLASH_js$/macros.js/;s/_SLASH_js$/.js/' <<< $(basename $x)`;cp $x ../cache/$y; done
+for x in `find out -type f | grep -E '.*\.(json|js)$'`;do y=`sed 's/transit\.json$/cache.json/;s/\./_SLASH_/g;s/_SLASH_cache_SLASH_json$/.cache.json/;s/macros_SLASH_js$/macros.js/;s/_SLASH_js$/.js/' <<< $(basename $x)`;cp $x ../cache/$y; done
