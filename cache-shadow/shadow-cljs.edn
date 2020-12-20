@@ -17,7 +17,7 @@
                 [viebel/gadjett "0.5.9" :exclusions [org.clojure/core.async org.clojure/core.match]] ;; core.async is provided by andare, core.match is provided by abbinare
                 [viebel/hoquet "0.0.3"]
                 [viebel/http-fx "0.1.4-SNAPSHOT" :exclusions [reagent]]
-                [viebel/klipse-clj "10.1.3"]
+                [viebel/klipse-clj "10.1.11"]
                 [viebel/poppea "0.2.1"]
                 [viebel/re-frame "0.9.3-SNAPSHOT" :exclusions [reagent]]
                 [viebel/reagent "1.0.0-alpha2"]]
@@ -27,5 +27,5 @@
                                           :exclude #{cljs.js}
                                           :entries [cljs.test clojure.test.check cljs.pprint cljs.analyzer
                                                     cljs.spec.alpha cljs.spec.test.alpha cljs.spec.gen.alpha
-                                                    cljs.core.match hoquet.runtime]
-                                          :macros [clojure.template cljs.env.macros cljs.compiler.macros]}}}
+                                                    cljs.core.match hoquet.runtime klipse-clj.doc]
+                                          :macros [klipse-clj.doc klipse-clj.macros clojure.template cljs.env.macros cljs.compiler.macros]}}}
