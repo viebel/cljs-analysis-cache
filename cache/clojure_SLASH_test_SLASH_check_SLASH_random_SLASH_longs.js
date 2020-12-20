@@ -1,50 +1,77 @@
-goog.provide("clojure.test.check.random.longs");
-(function (){
+goog.provide('clojure.test.check.random.longs');
 clojure.test.check.random.longs.unsigned_bit_shift_right = (function clojure$test$check$random$longs$unsigned_bit_shift_right(x,n){
 return x.shiftRightUnsigned(n);
-}); return (
-new cljs.core.Var(function(){return clojure.test.check.random.longs.unsigned_bit_shift_right;},new cljs.core.Symbol("clojure.test.check.random.longs","unsigned-bit-shift-right","clojure.test.check.random.longs/unsigned-bit-shift-right",(1763416323),null),cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"ns","ns",(441598760)),new cljs.core.Keyword(null,"name","name",(1843675177)),new cljs.core.Keyword(null,"file","file",(-1269645878)),new cljs.core.Keyword(null,"end-column","end-column",(1425389514)),new cljs.core.Keyword(null,"column","column",(2078222095)),new cljs.core.Keyword(null,"line","line",(212345235)),new cljs.core.Keyword(null,"end-line","end-line",(1837326455)),new cljs.core.Keyword(null,"arglists","arglists",(1661989754)),new cljs.core.Keyword(null,"doc","doc",(1913296891)),new cljs.core.Keyword(null,"test","test",(577538877))],[cljs.core.with_meta(new cljs.core.Symbol(null,"clojure.test.check.random.longs","clojure.test.check.random.longs",(1488222017),null),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"author","author",(2111686192)),"Gary Fredericks",new cljs.core.Keyword(null,"doc","doc",(1913296891)),"Internal namespace, wrapping some goog.math.Long functionality."], null)),new cljs.core.Symbol(null,"unsigned-bit-shift-right","unsigned-bit-shift-right",(-1953076601),null),"clojure/test/check/random/longs.cljs",(31),(1),(19),(19),cljs.core.list(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"x","x",(-555367584),null),new cljs.core.Symbol(null,"n","n",(-2092305744),null)], null)),null,(cljs.core.truth_(clojure.test.check.random.longs.unsigned_bit_shift_right)?clojure.test.check.random.longs.unsigned_bit_shift_right.cljs$lang$test:null)])));})()
-;
-(function (){
+});
 clojure.test.check.random.longs._PLUS_ = (function clojure$test$check$random$longs$_PLUS_(x,y){
 return x.add(y);
-}); return (
-new cljs.core.Var(function(){return clojure.test.check.random.longs._PLUS_;},new cljs.core.Symbol("clojure.test.check.random.longs","+","clojure.test.check.random.longs/+",(-1117639098),null),cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"ns","ns",(441598760)),new cljs.core.Keyword(null,"name","name",(1843675177)),new cljs.core.Keyword(null,"file","file",(-1269645878)),new cljs.core.Keyword(null,"end-column","end-column",(1425389514)),new cljs.core.Keyword(null,"column","column",(2078222095)),new cljs.core.Keyword(null,"line","line",(212345235)),new cljs.core.Keyword(null,"end-line","end-line",(1837326455)),new cljs.core.Keyword(null,"arglists","arglists",(1661989754)),new cljs.core.Keyword(null,"doc","doc",(1913296891)),new cljs.core.Keyword(null,"test","test",(577538877))],[cljs.core.with_meta(new cljs.core.Symbol(null,"clojure.test.check.random.longs","clojure.test.check.random.longs",(1488222017),null),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"author","author",(2111686192)),"Gary Fredericks",new cljs.core.Keyword(null,"doc","doc",(1913296891)),"Internal namespace, wrapping some goog.math.Long functionality."], null)),new cljs.core.Symbol(null,"+","+",(-740910886),null),"clojure/test/check/random/longs.cljs",(8),(1),(23),(23),cljs.core.list(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"x","x",(-555367584),null),new cljs.core.Symbol(null,"y","y",(-117328249),null)], null)),null,(cljs.core.truth_(clojure.test.check.random.longs._PLUS_)?clojure.test.check.random.longs._PLUS_.cljs$lang$test:null)])));})()
-;
-(function (){
+});
 clojure.test.check.random.longs._STAR_ = (function clojure$test$check$random$longs$_STAR_(x,y){
-return x.multiply(y);
-}); return (
-new cljs.core.Var(function(){return clojure.test.check.random.longs._STAR_;},new cljs.core.Symbol("clojure.test.check.random.longs","*","clojure.test.check.random.longs/*",(1994967469),null),cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"ns","ns",(441598760)),new cljs.core.Keyword(null,"name","name",(1843675177)),new cljs.core.Keyword(null,"file","file",(-1269645878)),new cljs.core.Keyword(null,"end-column","end-column",(1425389514)),new cljs.core.Keyword(null,"column","column",(2078222095)),new cljs.core.Keyword(null,"line","line",(212345235)),new cljs.core.Keyword(null,"end-line","end-line",(1837326455)),new cljs.core.Keyword(null,"arglists","arglists",(1661989754)),new cljs.core.Keyword(null,"doc","doc",(1913296891)),new cljs.core.Keyword(null,"test","test",(577538877))],[cljs.core.with_meta(new cljs.core.Symbol(null,"clojure.test.check.random.longs","clojure.test.check.random.longs",(1488222017),null),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"author","author",(2111686192)),"Gary Fredericks",new cljs.core.Keyword(null,"doc","doc",(1913296891)),"Internal namespace, wrapping some goog.math.Long functionality."], null)),new cljs.core.Symbol(null,"*","*",(345799209),null),"clojure/test/check/random/longs.cljs",(8),(1),(27),(27),cljs.core.list(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"x","x",(-555367584),null),new cljs.core.Symbol(null,"y","y",(-117328249),null)], null)),null,(cljs.core.truth_(clojure.test.check.random.longs._STAR_)?clojure.test.check.random.longs._STAR_.cljs$lang$test:null)])));})()
-;
-(function (){
+var a48 = (x.high_ >>> (16));
+var a32 = (x.high_ & (65535));
+var a16 = (x.low_ >>> (16));
+var a00 = (x.low_ & (65535));
+var b48 = (y.high_ >>> (16));
+var b32 = (y.high_ & (65535));
+var b16 = (y.low_ >>> (16));
+var b00 = (y.low_ & (65535));
+var arr = [(0),(0),(0),(0)];
+(arr[(0)] = (a00 * b00));
+
+(arr[(1)] = ((arr[(0)]) >>> (16)));
+
+(arr[(0)] = ((arr[(0)]) & (65535)));
+
+(arr[(1)] = ((arr[(1)]) + (a16 * b00)));
+
+(arr[(2)] = ((arr[(1)]) >>> (16)));
+
+(arr[(1)] = ((arr[(1)]) & (65535)));
+
+(arr[(1)] = ((arr[(1)]) + (a00 * b16)));
+
+(arr[(2)] = ((arr[(2)]) + ((arr[(1)]) >>> (16))));
+
+(arr[(1)] = ((arr[(1)]) & (65535)));
+
+(arr[(2)] = ((arr[(2)]) + (a32 * b00)));
+
+(arr[(3)] = ((arr[(2)]) >>> (16)));
+
+(arr[(2)] = ((arr[(2)]) & (65535)));
+
+(arr[(2)] = ((arr[(2)]) + (a16 * b16)));
+
+(arr[(3)] = ((arr[(3)]) + ((arr[(2)]) >>> (16))));
+
+(arr[(2)] = ((arr[(2)]) & (65535)));
+
+(arr[(2)] = ((arr[(2)]) + (a00 * b32)));
+
+(arr[(3)] = ((arr[(3)]) + ((arr[(2)]) >>> (16))));
+
+(arr[(2)] = ((arr[(2)]) & (65535)));
+
+(arr[(3)] = (((((arr[(3)]) + (a48 * b00)) + (a32 * b16)) + (a16 * b32)) + (a00 * b48)));
+
+(arr[(3)] = ((arr[(3)]) & (65535)));
+
+return goog.math.Long.fromBits((((arr[(1)]) << (16)) | (arr[(0)])),(((arr[(3)]) << (16)) | (arr[(2)])));
+});
 clojure.test.check.random.longs.bit_xor = (function clojure$test$check$random$longs$bit_xor(x,y){
 return x.xor(y);
-}); return (
-new cljs.core.Var(function(){return clojure.test.check.random.longs.bit_xor;},new cljs.core.Symbol("clojure.test.check.random.longs","bit-xor","clojure.test.check.random.longs/bit-xor",(-1911764861),null),cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"ns","ns",(441598760)),new cljs.core.Keyword(null,"name","name",(1843675177)),new cljs.core.Keyword(null,"file","file",(-1269645878)),new cljs.core.Keyword(null,"end-column","end-column",(1425389514)),new cljs.core.Keyword(null,"column","column",(2078222095)),new cljs.core.Keyword(null,"line","line",(212345235)),new cljs.core.Keyword(null,"end-line","end-line",(1837326455)),new cljs.core.Keyword(null,"arglists","arglists",(1661989754)),new cljs.core.Keyword(null,"doc","doc",(1913296891)),new cljs.core.Keyword(null,"test","test",(577538877))],[cljs.core.with_meta(new cljs.core.Symbol(null,"clojure.test.check.random.longs","clojure.test.check.random.longs",(1488222017),null),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"author","author",(2111686192)),"Gary Fredericks",new cljs.core.Keyword(null,"doc","doc",(1913296891)),"Internal namespace, wrapping some goog.math.Long functionality."], null)),new cljs.core.Symbol(null,"bit-xor","bit-xor",(-1334295033),null),"clojure/test/check/random/longs.cljs",(14),(1),(31),(31),cljs.core.list(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"x","x",(-555367584),null),new cljs.core.Symbol(null,"y","y",(-117328249),null)], null)),null,(cljs.core.truth_(clojure.test.check.random.longs.bit_xor)?clojure.test.check.random.longs.bit_xor.cljs$lang$test:null)])));})()
-;
-(function (){
+});
 clojure.test.check.random.longs.bit_or = (function clojure$test$check$random$longs$bit_or(x,y){
 return x.or(y);
-}); return (
-new cljs.core.Var(function(){return clojure.test.check.random.longs.bit_or;},new cljs.core.Symbol("clojure.test.check.random.longs","bit-or","clojure.test.check.random.longs/bit-or",(-1723066103),null),cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"ns","ns",(441598760)),new cljs.core.Keyword(null,"name","name",(1843675177)),new cljs.core.Keyword(null,"file","file",(-1269645878)),new cljs.core.Keyword(null,"end-column","end-column",(1425389514)),new cljs.core.Keyword(null,"column","column",(2078222095)),new cljs.core.Keyword(null,"line","line",(212345235)),new cljs.core.Keyword(null,"end-line","end-line",(1837326455)),new cljs.core.Keyword(null,"arglists","arglists",(1661989754)),new cljs.core.Keyword(null,"doc","doc",(1913296891)),new cljs.core.Keyword(null,"test","test",(577538877))],[cljs.core.with_meta(new cljs.core.Symbol(null,"clojure.test.check.random.longs","clojure.test.check.random.longs",(1488222017),null),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"author","author",(2111686192)),"Gary Fredericks",new cljs.core.Keyword(null,"doc","doc",(1913296891)),"Internal namespace, wrapping some goog.math.Long functionality."], null)),new cljs.core.Symbol(null,"bit-or","bit-or",(-1144943723),null),"clojure/test/check/random/longs.cljs",(13),(1),(35),(35),cljs.core.list(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"x","x",(-555367584),null),new cljs.core.Symbol(null,"y","y",(-117328249),null)], null)),null,(cljs.core.truth_(clojure.test.check.random.longs.bit_or)?clojure.test.check.random.longs.bit_or.cljs$lang$test:null)])));})()
-;
-(function (){
+});
 clojure.test.check.random.longs.from_string = (function clojure$test$check$random$longs$from_string(s,radix){
 return goog.math.Long.fromString(s,radix);
-}); return (
-new cljs.core.Var(function(){return clojure.test.check.random.longs.from_string;},new cljs.core.Symbol("clojure.test.check.random.longs","from-string","clojure.test.check.random.longs/from-string",(1750367047),null),cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"ns","ns",(441598760)),new cljs.core.Keyword(null,"name","name",(1843675177)),new cljs.core.Keyword(null,"file","file",(-1269645878)),new cljs.core.Keyword(null,"end-column","end-column",(1425389514)),new cljs.core.Keyword(null,"column","column",(2078222095)),new cljs.core.Keyword(null,"line","line",(212345235)),new cljs.core.Keyword(null,"end-line","end-line",(1837326455)),new cljs.core.Keyword(null,"arglists","arglists",(1661989754)),new cljs.core.Keyword(null,"doc","doc",(1913296891)),new cljs.core.Keyword(null,"test","test",(577538877))],[cljs.core.with_meta(new cljs.core.Symbol(null,"clojure.test.check.random.longs","clojure.test.check.random.longs",(1488222017),null),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"author","author",(2111686192)),"Gary Fredericks",new cljs.core.Keyword(null,"doc","doc",(1913296891)),"Internal namespace, wrapping some goog.math.Long functionality."], null)),new cljs.core.Symbol(null,"from-string","from-string",(1323887819),null),"clojure/test/check/random/longs.cljs",(18),(1),(39),(39),cljs.core.list(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"s","s",(-948495851),null),new cljs.core.Symbol(null,"radix","radix",(-1797419306),null)], null)),null,(cljs.core.truth_(clojure.test.check.random.longs.from_string)?clojure.test.check.random.longs.from_string.cljs$lang$test:null)])));})()
-;
-(function (){
+});
 clojure.test.check.random.longs.from_number = (function clojure$test$check$random$longs$from_number(x){
 return goog.math.Long.fromNumber(x);
-}); return (
-new cljs.core.Var(function(){return clojure.test.check.random.longs.from_number;},new cljs.core.Symbol("clojure.test.check.random.longs","from-number","clojure.test.check.random.longs/from-number",(-1435754417),null),cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"ns","ns",(441598760)),new cljs.core.Keyword(null,"name","name",(1843675177)),new cljs.core.Keyword(null,"file","file",(-1269645878)),new cljs.core.Keyword(null,"end-column","end-column",(1425389514)),new cljs.core.Keyword(null,"column","column",(2078222095)),new cljs.core.Keyword(null,"line","line",(212345235)),new cljs.core.Keyword(null,"end-line","end-line",(1837326455)),new cljs.core.Keyword(null,"arglists","arglists",(1661989754)),new cljs.core.Keyword(null,"doc","doc",(1913296891)),new cljs.core.Keyword(null,"test","test",(577538877))],[cljs.core.with_meta(new cljs.core.Symbol(null,"clojure.test.check.random.longs","clojure.test.check.random.longs",(1488222017),null),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"author","author",(2111686192)),"Gary Fredericks",new cljs.core.Keyword(null,"doc","doc",(1913296891)),"Internal namespace, wrapping some goog.math.Long functionality."], null)),new cljs.core.Symbol(null,"from-number","from-number",(-1913081917),null),"clojure/test/check/random/longs.cljs",(18),(1),(43),(43),cljs.core.list(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"x","x",(-555367584),null)], null)),null,(cljs.core.truth_(clojure.test.check.random.longs.from_number)?clojure.test.check.random.longs.from_number.cljs$lang$test:null)])));})()
-;
+});
 /**
  * Coerces to long, or returns nil if not possible.
  */
-(function (){
 clojure.test.check.random.longs.__GT_long = (function clojure$test$check$random$longs$__GT_long(x){
 if(typeof x === 'number'){
 return goog.math.Long.fromNumber(x);
@@ -55,14 +82,8 @@ return x;
 return null;
 }
 }
-}); return (
-new cljs.core.Var(function(){return clojure.test.check.random.longs.__GT_long;},new cljs.core.Symbol("clojure.test.check.random.longs","->long","clojure.test.check.random.longs/->long",(1174349581),null),cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"ns","ns",(441598760)),new cljs.core.Keyword(null,"name","name",(1843675177)),new cljs.core.Keyword(null,"file","file",(-1269645878)),new cljs.core.Keyword(null,"end-column","end-column",(1425389514)),new cljs.core.Keyword(null,"column","column",(2078222095)),new cljs.core.Keyword(null,"line","line",(212345235)),new cljs.core.Keyword(null,"end-line","end-line",(1837326455)),new cljs.core.Keyword(null,"arglists","arglists",(1661989754)),new cljs.core.Keyword(null,"doc","doc",(1913296891)),new cljs.core.Keyword(null,"test","test",(577538877))],[cljs.core.with_meta(new cljs.core.Symbol(null,"clojure.test.check.random.longs","clojure.test.check.random.longs",(1488222017),null),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"author","author",(2111686192)),"Gary Fredericks",new cljs.core.Keyword(null,"doc","doc",(1913296891)),"Internal namespace, wrapping some goog.math.Long functionality."], null)),new cljs.core.Symbol(null,"->long","->long",(-1421569679),null),"clojure/test/check/random/longs.cljs",(13),(1),(47),(47),cljs.core.list(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"x","x",(-555367584),null)], null)),"Coerces to long, or returns nil if not possible.",(cljs.core.truth_(clojure.test.check.random.longs.__GT_long)?clojure.test.check.random.longs.__GT_long.cljs$lang$test:null)])));})()
-;
-(function (){
-clojure.test.check.random.longs.ONE = goog.math.Long.getOne(); return (
-new cljs.core.Var(function(){return clojure.test.check.random.longs.ONE;},new cljs.core.Symbol("clojure.test.check.random.longs","ONE","clojure.test.check.random.longs/ONE",(-1686890027),null),cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"ns","ns",(441598760)),new cljs.core.Keyword(null,"name","name",(1843675177)),new cljs.core.Keyword(null,"file","file",(-1269645878)),new cljs.core.Keyword(null,"end-column","end-column",(1425389514)),new cljs.core.Keyword(null,"column","column",(2078222095)),new cljs.core.Keyword(null,"line","line",(212345235)),new cljs.core.Keyword(null,"end-line","end-line",(1837326455)),new cljs.core.Keyword(null,"arglists","arglists",(1661989754)),new cljs.core.Keyword(null,"doc","doc",(1913296891)),new cljs.core.Keyword(null,"test","test",(577538877))],[cljs.core.with_meta(new cljs.core.Symbol(null,"clojure.test.check.random.longs","clojure.test.check.random.longs",(1488222017),null),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"author","author",(2111686192)),"Gary Fredericks",new cljs.core.Keyword(null,"doc","doc",(1913296891)),"Internal namespace, wrapping some goog.math.Long functionality."], null)),new cljs.core.Symbol(null,"ONE","ONE",(-1107326119),null),"clojure/test/check/random/longs.cljs",(9),(1),(56),(56),cljs.core.List.EMPTY,null,(cljs.core.truth_(clojure.test.check.random.longs.ONE)?clojure.test.check.random.longs.ONE.cljs$lang$test:null)])));})()
-;
-(function (){
-clojure.test.check.random.longs.bit_count = clojure.test.check.random.longs.bit_count_impl.bit_count; return (
-new cljs.core.Var(function(){return clojure.test.check.random.longs.bit_count;},new cljs.core.Symbol("clojure.test.check.random.longs","bit-count","clojure.test.check.random.longs/bit-count",(-1249856311),null),cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"ns","ns",(441598760)),new cljs.core.Keyword(null,"name","name",(1843675177)),new cljs.core.Keyword(null,"file","file",(-1269645878)),new cljs.core.Keyword(null,"end-column","end-column",(1425389514)),new cljs.core.Keyword(null,"column","column",(2078222095)),new cljs.core.Keyword(null,"line","line",(212345235)),new cljs.core.Keyword(null,"end-line","end-line",(1837326455)),new cljs.core.Keyword(null,"arglists","arglists",(1661989754)),new cljs.core.Keyword(null,"doc","doc",(1913296891)),new cljs.core.Keyword(null,"test","test",(577538877))],[cljs.core.with_meta(new cljs.core.Symbol(null,"clojure.test.check.random.longs","clojure.test.check.random.longs",(1488222017),null),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"author","author",(2111686192)),"Gary Fredericks",new cljs.core.Keyword(null,"doc","doc",(1913296891)),"Internal namespace, wrapping some goog.math.Long functionality."], null)),new cljs.core.Symbol(null,"bit-count","bit-count",(1400227397),null),"clojure/test/check/random/longs.cljs",(15),(1),(58),(58),cljs.core.List.EMPTY,null,(cljs.core.truth_(clojure.test.check.random.longs.bit_count)?clojure.test.check.random.longs.bit_count.cljs$lang$test:null)])));})()
-;
+});
+clojure.test.check.random.longs.ONE = goog.math.Long.getOne();
+clojure.test.check.random.longs.bit_count = clojure.test.check.random.longs.bit_count_impl.bit_count;
+
+//# sourceMappingURL=clojure.test.check.random.longs.js.map

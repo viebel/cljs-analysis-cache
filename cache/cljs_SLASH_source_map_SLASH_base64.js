@@ -1,6 +1,4 @@
-// Compiled by ClojureScript 1.9.946 {:static-fns true, :fn-invoke-direct true, :optimize-constants false}
 goog.provide('cljs.source_map.base64');
-goog.require('cljs.core');
 cljs.source_map.base64.chars64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 cljs.source_map.base64.char__GT_int = cljs.core.zipmap(cljs.source_map.base64.chars64,cljs.core.range.cljs$core$IFn$_invoke$arity$2((0),(64)));
 cljs.source_map.base64.int__GT_char = cljs.core.zipmap(cljs.core.range.cljs$core$IFn$_invoke$arity$2((0),(64)),cljs.source_map.base64.chars64);
@@ -20,3 +18,5 @@ return cljs.core.second(e);
 throw (new Error(["Not a valid base 64 digit: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(c)].join('')));
 }
 });
+
+//# sourceMappingURL=cljs.source_map.base64.js.map
