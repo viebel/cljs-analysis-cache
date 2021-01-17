@@ -23,7 +23,7 @@ throw (new Error("Assert failed: (every? symbol? argv)"));
 
 return clojure.walk.postwalk_replace(cljs.core.zipmap(argv,values),expr);
 });
-var ret__4785__auto___7454 = (function (){
+var ret__4785__auto___19025 = (function (){
 /**
  * Repeatedly copies expr (in a do block) for each group of arguments
  *   in values.  values are automatically partitioned by the number of
@@ -34,14 +34,14 @@ var ret__4785__auto___7454 = (function (){
  */
 clojure.template$macros.do_template = (function clojure$template$macros$do_template(var_args){
 var args__4742__auto__ = [];
-var len__4736__auto___7455 = arguments.length;
-var i__4737__auto___7456 = (0);
+var len__4736__auto___19026 = arguments.length;
+var i__4737__auto___19027 = (0);
 while(true){
-if((i__4737__auto___7456 < len__4736__auto___7455)){
-args__4742__auto__.push((arguments[i__4737__auto___7456]));
+if((i__4737__auto___19027 < len__4736__auto___19026)){
+args__4742__auto__.push((arguments[i__4737__auto___19027]));
 
-var G__7458 = (i__4737__auto___7456 + (1));
-i__4737__auto___7456 = G__7458;
+var G__19032 = (i__4737__auto___19027 + (1));
+i__4737__auto___19027 = G__19032;
 continue;
 } else {
 }
@@ -62,17 +62,17 @@ return clojure.template$macros.apply_template(argv,expr,a);
 (clojure.template$macros.do_template.cljs$lang$maxFixedArity = (4));
 
 /** @this {Function} */
-(clojure.template$macros.do_template.cljs$lang$applyTo = (function (seq7432){
-var G__7433 = cljs.core.first(seq7432);
-var seq7432__$1 = cljs.core.next(seq7432);
-var G__7434 = cljs.core.first(seq7432__$1);
-var seq7432__$2 = cljs.core.next(seq7432__$1);
-var G__7435 = cljs.core.first(seq7432__$2);
-var seq7432__$3 = cljs.core.next(seq7432__$2);
-var G__7436 = cljs.core.first(seq7432__$3);
-var seq7432__$4 = cljs.core.next(seq7432__$3);
+(clojure.template$macros.do_template.cljs$lang$applyTo = (function (seq18996){
+var G__18998 = cljs.core.first(seq18996);
+var seq18996__$1 = cljs.core.next(seq18996);
+var G__18999 = cljs.core.first(seq18996__$1);
+var seq18996__$2 = cljs.core.next(seq18996__$1);
+var G__19000 = cljs.core.first(seq18996__$2);
+var seq18996__$3 = cljs.core.next(seq18996__$2);
+var G__19001 = cljs.core.first(seq18996__$3);
+var seq18996__$4 = cljs.core.next(seq18996__$3);
 var self__4723__auto__ = this;
-return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__7433,G__7434,G__7435,G__7436,seq7432__$4);
+return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__18998,G__18999,G__19000,G__19001,seq18996__$4);
 }));
 
 return null;
