@@ -1,19 +1,19 @@
 goog.provide('cljs.tools.reader.reader_types$macros');
-var ret__4785__auto___19033 = (function (){
+var ret__4785__auto___16342 = (function (){
 /**
  * If reader is a SourceLoggingPushbackReader, execute body in a source
  *   logging context. Otherwise, execute body, returning the result.
  */
 cljs.tools.reader.reader_types$macros.log_source = (function cljs$tools$reader$reader_types$macros$log_source(var_args){
 var args__4742__auto__ = [];
-var len__4736__auto___19034 = arguments.length;
-var i__4737__auto___19035 = (0);
+var len__4736__auto___16343 = arguments.length;
+var i__4737__auto___16344 = (0);
 while(true){
-if((i__4737__auto___19035 < len__4736__auto___19034)){
-args__4742__auto__.push((arguments[i__4737__auto___19035]));
+if((i__4737__auto___16344 < len__4736__auto___16343)){
+args__4742__auto__.push((arguments[i__4737__auto___16344]));
 
-var G__19036 = (i__4737__auto___19035 + (1));
-i__4737__auto___19035 = G__19036;
+var G__16346 = (i__4737__auto___16344 + (1));
+i__4737__auto___16344 = G__16346;
 continue;
 } else {
 }
@@ -31,15 +31,15 @@ return cljs.core.sequence.cljs$core$IFn$_invoke$arity$1(cljs.core.seq(cljs.core.
 (cljs.tools.reader.reader_types$macros.log_source.cljs$lang$maxFixedArity = (3));
 
 /** @this {Function} */
-(cljs.tools.reader.reader_types$macros.log_source.cljs$lang$applyTo = (function (seq18988){
-var G__18989 = cljs.core.first(seq18988);
-var seq18988__$1 = cljs.core.next(seq18988);
-var G__18990 = cljs.core.first(seq18988__$1);
-var seq18988__$2 = cljs.core.next(seq18988__$1);
-var G__18991 = cljs.core.first(seq18988__$2);
-var seq18988__$3 = cljs.core.next(seq18988__$2);
+(cljs.tools.reader.reader_types$macros.log_source.cljs$lang$applyTo = (function (seq16327){
+var G__16328 = cljs.core.first(seq16327);
+var seq16327__$1 = cljs.core.next(seq16327);
+var G__16329 = cljs.core.first(seq16327__$1);
+var seq16327__$2 = cljs.core.next(seq16327__$1);
+var G__16330 = cljs.core.first(seq16327__$2);
+var seq16327__$3 = cljs.core.next(seq16327__$2);
 var self__4723__auto__ = this;
-return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__18989,G__18990,G__18991,seq18988__$3);
+return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__16328,G__16329,G__16330,seq16327__$3);
 }));
 
 return null;

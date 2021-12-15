@@ -13,6 +13,7 @@
                 [org.clojure/test.check "0.10.0-alpha3"]
                 [org.clojure/tools.reader "1.3.2"]
                 [org.omcljs/om "1.0.0-alpha47"]
+                [lambdaisland/uri "1.12.89"]
                 [rewrite-cljs "0.4.3"]
                 [viebel/abbinare "1.10.597"] ;; When generated with shadow, it doesn't work => Generate with Planck
                 [viebel/gadjett "0.5.9" :exclusions [org.clojure/core.async org.clojure/core.match]] ;; core.async is provided by andare, core.match is provided by abbinare
@@ -26,8 +27,7 @@
  :builds       {:analysis-cache {:target     :bootstrap
                                  :output-dir "out"
                                  :exclude    #{cljs.js}
-                                 :entries    [chivorcam.core cljs.test clojure.test.check cljs.pprint cljs.analyzer
-                                              cljs.spec.alpha cljs.spec.test.alpha cljs.spec.gen.alpha
+                                 :entries    [chivorcam.core cljs.test clojure.test.check cljs.pprint cljs.analyzer lambdaisland.uri    cljs.spec.alpha cljs.spec.test.alpha cljs.spec.gen.alpha
                                               cljs.core.match hoquet.runtime klipse-clj.doc]
                                  :macros     [klipse-clj.doc klipse-clj.macros clojure.template cljs.env.macros cljs.compiler.macros]}}}
 
