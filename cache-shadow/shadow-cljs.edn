@@ -27,7 +27,7 @@
  :builds       {:analysis-cache {:target     :bootstrap
                                  :output-dir "out"
                                  :exclude    #{cljs.js}
-                                 :entries    [chivorcam.core cljs.test clojure.test.check cljs.pprint cljs.analyzer lambdaisland.uri    cljs.spec.alpha cljs.spec.test.alpha cljs.spec.gen.alpha
+                                 :entries    [cljs.js chivorcam.core cljs.test clojure.test.check cljs.pprint cljs.analyzer lambdaisland.uri    cljs.spec.alpha cljs.spec.test.alpha cljs.spec.gen.alpha
                                               cljs.core.match hoquet.runtime klipse-clj.doc]
                                  :macros     [klipse-clj.doc klipse-clj.macros clojure.template cljs.env.macros cljs.compiler.macros]}}}
 
