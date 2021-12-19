@@ -5,7 +5,7 @@ goog.provide('clojure.test.check.results');
  */
 clojure.test.check.results.Result = function(){};
 
-var clojure$test$check$results$Result$pass_QMARK_$dyn_7371 = (function (result){
+var clojure$test$check$results$Result$pass_QMARK_$dyn_10520 = (function (result){
 var x__4428__auto__ = (((result == null))?null:result);
 var m__4429__auto__ = (clojure.test.check.results.pass_QMARK_[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -26,11 +26,11 @@ clojure.test.check.results.pass_QMARK_ = (function clojure$test$check$results$pa
 if((((!((result == null)))) && ((!((result.clojure$test$check$results$Result$pass_QMARK_$arity$1 == null)))))){
 return result.clojure$test$check$results$Result$pass_QMARK_$arity$1(result);
 } else {
-return clojure$test$check$results$Result$pass_QMARK_$dyn_7371(result);
+return clojure$test$check$results$Result$pass_QMARK_$dyn_10520(result);
 }
 });
 
-var clojure$test$check$results$Result$result_data$dyn_7376 = (function (result){
+var clojure$test$check$results$Result$result_data$dyn_10525 = (function (result){
 var x__4428__auto__ = (((result == null))?null:result);
 var m__4429__auto__ = (clojure.test.check.results.result_data[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -51,7 +51,7 @@ clojure.test.check.results.result_data = (function clojure$test$check$results$re
 if((((!((result == null)))) && ((!((result.clojure$test$check$results$Result$result_data$arity$1 == null)))))){
 return result.clojure$test$check$results$Result$result_data$arity$1(result);
 } else {
-return clojure$test$check$results$Result$result_data$dyn_7376(result);
+return clojure$test$check$results$Result$result_data$dyn_10525(result);
 }
 });
 

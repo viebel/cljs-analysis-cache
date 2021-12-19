@@ -5,10 +5,10 @@ while(true){
 if((i === (0))){
 return x;
 } else {
-var G__7395 = (i - (1));
-var G__7396 = (x / (2));
-i = G__7395;
-x = G__7396;
+var G__10447 = (i - (1));
+var G__10448 = (x / (2));
+i = G__10447;
+x = G__10448;
 continue;
 }
 break;

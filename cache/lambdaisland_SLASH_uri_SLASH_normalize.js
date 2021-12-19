@@ -27,8 +27,8 @@ return ((((55296) <= char_code)) && ((char_code <= (56319))));
  *   UCS-2 (or is it UTF-16?) surrogate pairs. Because JavaScript. And Java.
  */
 lambdaisland.uri.normalize.char_seq = (function lambdaisland$uri$normalize$char_seq(var_args){
-var G__6190 = arguments.length;
-switch (G__6190) {
+var G__10651 = arguments.length;
+switch (G__10651) {
 case 1:
 return lambdaisland.uri.normalize.char_seq.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -69,8 +69,8 @@ return cljs.core.cons(cljs.core.subs.cljs$core$IFn$_invoke$arity$3(str,offset,(o
  * `*character-encoding*`
  */
 lambdaisland.uri.normalize.percent_encode = (function lambdaisland$uri$normalize$percent_encode(var_args){
-var G__6262 = arguments.length;
-switch (G__6262) {
+var G__10666 = arguments.length;
+switch (G__10666) {
 case 1:
 return lambdaisland.uri.normalize.percent_encode.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -86,19 +86,19 @@ throw (new Error(["Invalid arity: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(
 });
 
 (lambdaisland.uri.normalize.percent_encode.cljs$core$IFn$_invoke$arity$1 = (function (component){
-return cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.str,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__6248_SHARP_){
-return ["%",lambdaisland.uri.platform.byte__GT_hex(p1__6248_SHARP_)].join('');
+return cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.str,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__10656_SHARP_){
+return ["%",lambdaisland.uri.platform.byte__GT_hex(p1__10656_SHARP_)].join('');
 }),lambdaisland.uri.platform.string__GT_byte_seq(component)));
 }));
 
 (lambdaisland.uri.normalize.percent_encode.cljs$core$IFn$_invoke$arity$2 = (function (component,type){
 var char_class = cljs.core.get.cljs$core$IFn$_invoke$arity$2(lambdaisland.uri.normalize.character_classes,type);
-var encode_char = (function (p1__6254_SHARP_){
-var G__6274 = p1__6254_SHARP_;
-if(cljs.core.truth_(cljs.core.re_find(char_class,p1__6254_SHARP_))){
-return lambdaisland.uri.normalize.percent_encode.cljs$core$IFn$_invoke$arity$1(G__6274);
+var encode_char = (function (p1__10659_SHARP_){
+var G__10677 = p1__10659_SHARP_;
+if(cljs.core.truth_(cljs.core.re_find(char_class,p1__10659_SHARP_))){
+return lambdaisland.uri.normalize.percent_encode.cljs$core$IFn$_invoke$arity$1(G__10677);
 } else {
-return G__6274;
+return G__10677;
 }
 });
 return cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.str,cljs.core.map.cljs$core$IFn$_invoke$arity$2(encode_char,lambdaisland.uri.normalize.char_seq.cljs$core$IFn$_invoke$arity$1(component)));
@@ -113,10 +113,10 @@ return cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.str,cljs.core.map
  */
 lambdaisland.uri.normalize.percent_decode = (function lambdaisland$uri$normalize$percent_decode(s){
 if(cljs.core.truth_(s)){
-return clojure.string.replace(s,/(%[0-9A-Fa-f]{2})+/,(function (p__6292){
-var vec__6306 = p__6292;
-var x = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__6306,(0),null);
-var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__6306,(1),null);
+return clojure.string.replace(s,/(%[0-9A-Fa-f]{2})+/,(function (p__10689){
+var vec__10690 = p__10689;
+var x = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__10690,(0),null);
+var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__10690,(1),null);
 return lambdaisland.uri.platform.byte_seq__GT_string(cljs.core.map.cljs$core$IFn$_invoke$arity$2(lambdaisland.uri.platform.hex__GT_byte,cljs.core.drop.cljs$core$IFn$_invoke$arity$2((1),clojure.string.split.cljs$core$IFn$_invoke$arity$2(x,/%/))));
 }));
 } else {
@@ -173,24 +173,24 @@ if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(i,len)){
 return cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.str,res);
 } else {
 if((((i < (len - (2)))) && (cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2((37),lambdaisland.uri.platform.char_code_at(s,i))) && (lambdaisland.uri.normalize.hex_code_point_QMARK_(lambdaisland.uri.platform.char_code_at(s,(i + (1))))) && (lambdaisland.uri.normalize.hex_code_point_QMARK_(lambdaisland.uri.platform.char_code_at(s,(i + (2))))))){
-var G__6519 = (i + (3));
-var G__6520 = cljs.core.conj.cljs$core$IFn$_invoke$arity$2(res,lambdaisland.uri.normalize.percent_encode.cljs$core$IFn$_invoke$arity$2(lambdaisland.uri.normalize.percent_decode(cljs.core.subs.cljs$core$IFn$_invoke$arity$3(s,i,(i + (3)))),new cljs.core.Keyword(null,"query","query",-1288509510)));
-i = G__6519;
-res = G__6520;
+var G__10845 = (i + (3));
+var G__10846 = cljs.core.conj.cljs$core$IFn$_invoke$arity$2(res,lambdaisland.uri.normalize.percent_encode.cljs$core$IFn$_invoke$arity$2(lambdaisland.uri.normalize.percent_decode(cljs.core.subs.cljs$core$IFn$_invoke$arity$3(s,i,(i + (3)))),new cljs.core.Keyword(null,"query","query",-1288509510)));
+i = G__10845;
+res = G__10846;
 continue;
 } else {
 if(cljs.core.contains_QMARK_(lambdaisland.uri.normalize.sub_delims,cljs.core.subs.cljs$core$IFn$_invoke$arity$3(s,i,(i + (1))))){
-var G__6525 = (i + (1));
-var G__6526 = cljs.core.conj.cljs$core$IFn$_invoke$arity$2(res,cljs.core.subs.cljs$core$IFn$_invoke$arity$3(s,i,(i + (1))));
-i = G__6525;
-res = G__6526;
+var G__10851 = (i + (1));
+var G__10852 = cljs.core.conj.cljs$core$IFn$_invoke$arity$2(res,cljs.core.subs.cljs$core$IFn$_invoke$arity$3(s,i,(i + (1))));
+i = G__10851;
+res = G__10852;
 continue;
 } else {
 var increment = ((lambdaisland.uri.normalize.high_surrogate_QMARK_(lambdaisland.uri.platform.char_code_at(s,i)))?(2):(1));
-var G__6530 = (i + increment);
-var G__6532 = cljs.core.conj.cljs$core$IFn$_invoke$arity$2(res,lambdaisland.uri.normalize.percent_encode.cljs$core$IFn$_invoke$arity$2(cljs.core.subs.cljs$core$IFn$_invoke$arity$3(s,i,(i + increment)),new cljs.core.Keyword(null,"query","query",-1288509510)));
-i = G__6530;
-res = G__6532;
+var G__10859 = (i + increment);
+var G__10860 = cljs.core.conj.cljs$core$IFn$_invoke$arity$2(res,lambdaisland.uri.normalize.percent_encode.cljs$core$IFn$_invoke$arity$2(cljs.core.subs.cljs$core$IFn$_invoke$arity$3(s,i,(i + increment)),new cljs.core.Keyword(null,"query","query",-1288509510)));
+i = G__10859;
+res = G__10860;
 continue;
 
 }

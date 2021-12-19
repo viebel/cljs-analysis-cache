@@ -1,6 +1,6 @@
 {:dependencies [[cljsjs/react "16.13.1-0"]
-		            [cljsjs/react-dom "16.13.1-0"]
-	              [viebel/hicada "0.1.8"]
+                [cljsjs/react-dom "16.13.1-0"]
+                [viebel/hicada "0.1.8"]
                 [andare "1.1.587"] ;; A fork of core.async ported for use with self-hosted ClojureScript.
                 [cljs-bean "1.5.0"]
                 [chivorcam "1.0.0"]
@@ -24,7 +24,12 @@
                 [viebel/re-frame "0.9.3-SNAPSHOT" :exclusions [reagent]]
                 [viebel/reagent "1.0.0-alpha2"]]
  :source-paths ["src"]
- :builds       {:analysis-cache {:target     :bootstrap
+ :builds       {:core-analysis-cache {:target     :bootstrap
+                                      :output-dir "core-out"
+                                      :exclude    #{cljs.js}
+                                      :entries    [cljs.js]
+                                      :macros     []}
+                :analysis-cache {:target     :bootstrap
                                  :output-dir "out"
                                  :exclude    #{cljs.js}
                                  :entries    [cljs.js chivorcam.core cljs.test clojure.test.check cljs.pprint cljs.analyzer lambdaisland.uri    cljs.spec.alpha cljs.spec.test.alpha cljs.spec.gen.alpha

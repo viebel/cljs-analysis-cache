@@ -36,12 +36,12 @@ cljs.core.match$macros._STAR_backtrack_stack_STAR_ = cljs.core.List.EMPTY;
 cljs.core.match$macros._STAR_root_STAR_ = true;
 cljs.core.match$macros.warn = (function cljs$core$match$macros$warn(msg){
 if(cljs.core.not(cljs.core.deref(cljs.core.match$macros._STAR_warned_STAR_))){
-var _STAR_print_fn_STAR__orig_val__7655_8231 = cljs.core._STAR_print_fn_STAR_;
-var _STAR_print_fn_STAR__temp_val__7657_8232 = cljs.core._STAR_print_err_fn_STAR_;
-(cljs.core._STAR_print_fn_STAR_ = _STAR_print_fn_STAR__temp_val__7657_8232);
+var _STAR_print_fn_STAR__orig_val__7668_8231 = cljs.core._STAR_print_fn_STAR_;
+var _STAR_print_fn_STAR__temp_val__7669_8232 = cljs.core._STAR_print_err_fn_STAR_;
+(cljs.core._STAR_print_fn_STAR_ = _STAR_print_fn_STAR__temp_val__7669_8232);
 
 try{cljs.core.println.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2(["WARNING:",[cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core._STAR_ns_STAR_),", line ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.match$macros._STAR_line_STAR_),":"].join(''),msg], 0));
-}finally {(cljs.core._STAR_print_fn_STAR_ = _STAR_print_fn_STAR__orig_val__7655_8231);
+}finally {(cljs.core._STAR_print_fn_STAR_ = _STAR_print_fn_STAR__orig_val__7668_8231);
 }
 return cljs.core.reset_BANG_(cljs.core.match$macros._STAR_warned_STAR_,true);
 } else {
@@ -81,9 +81,9 @@ return cljs.core.sequence.cljs$core$IFn$_invoke$arity$1(cljs.core.seq(cljs.core.
 (cljs.core.match$macros.val_at_expr.cljs$lang$maxFixedArity = (0));
 
 /** @this {Function} */
-(cljs.core.match$macros.val_at_expr.cljs$lang$applyTo = (function (seq7670){
+(cljs.core.match$macros.val_at_expr.cljs$lang$applyTo = (function (seq7685){
 var self__4724__auto__ = this;
-return self__4724__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq7670));
+return self__4724__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq7685));
 }));
 
 cljs.core.match$macros.vector_type = (function cljs$core$match$macros$vector_type(var_args){
