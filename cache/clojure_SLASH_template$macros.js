@@ -23,7 +23,7 @@ throw (new Error("Assert failed: (every? symbol? argv)"));
 
 return clojure.walk.postwalk_replace(cljs.core.zipmap(argv,values),expr);
 });
-var ret__4785__auto___17180 = (function (){
+var ret__4785__auto___19411 = (function (){
 /**
  * Repeatedly copies expr (in a do block) for each group of arguments
  *   in values.  values are automatically partitioned by the number of
@@ -34,14 +34,14 @@ var ret__4785__auto___17180 = (function (){
  */
 clojure.template$macros.do_template = (function clojure$template$macros$do_template(var_args){
 var args__4742__auto__ = [];
-var len__4736__auto___17188 = arguments.length;
-var i__4737__auto___17190 = (0);
+var len__4736__auto___19412 = arguments.length;
+var i__4737__auto___19413 = (0);
 while(true){
-if((i__4737__auto___17190 < len__4736__auto___17188)){
-args__4742__auto__.push((arguments[i__4737__auto___17190]));
+if((i__4737__auto___19413 < len__4736__auto___19412)){
+args__4742__auto__.push((arguments[i__4737__auto___19413]));
 
-var G__17192 = (i__4737__auto___17190 + (1));
-i__4737__auto___17190 = G__17192;
+var G__19420 = (i__4737__auto___19413 + (1));
+i__4737__auto___19413 = G__19420;
 continue;
 } else {
 }
@@ -62,17 +62,17 @@ return clojure.template$macros.apply_template(argv,expr,a);
 (clojure.template$macros.do_template.cljs$lang$maxFixedArity = (4));
 
 /** @this {Function} */
-(clojure.template$macros.do_template.cljs$lang$applyTo = (function (seq17146){
-var G__17147 = cljs.core.first(seq17146);
-var seq17146__$1 = cljs.core.next(seq17146);
-var G__17148 = cljs.core.first(seq17146__$1);
-var seq17146__$2 = cljs.core.next(seq17146__$1);
-var G__17149 = cljs.core.first(seq17146__$2);
-var seq17146__$3 = cljs.core.next(seq17146__$2);
-var G__17150 = cljs.core.first(seq17146__$3);
-var seq17146__$4 = cljs.core.next(seq17146__$3);
+(clojure.template$macros.do_template.cljs$lang$applyTo = (function (seq19373){
+var G__19374 = cljs.core.first(seq19373);
+var seq19373__$1 = cljs.core.next(seq19373);
+var G__19375 = cljs.core.first(seq19373__$1);
+var seq19373__$2 = cljs.core.next(seq19373__$1);
+var G__19376 = cljs.core.first(seq19373__$2);
+var seq19373__$3 = cljs.core.next(seq19373__$2);
+var G__19377 = cljs.core.first(seq19373__$3);
+var seq19373__$4 = cljs.core.next(seq19373__$3);
 var self__4723__auto__ = this;
-return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__17147,G__17148,G__17149,G__17150,seq17146__$4);
+return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__19374,G__19375,G__19376,G__19377,seq19373__$4);
 }));
 
 return null;

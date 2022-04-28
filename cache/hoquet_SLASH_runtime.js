@@ -25,8 +25,8 @@ hoquet.runtime.escape_html = (function hoquet$runtime$escape_html(text){
 return clojure.string.escape(hoquet.runtime.as_str(text),hoquet.runtime.character_escapes);
 });
 hoquet.runtime.xml_attribute = (function hoquet$runtime$xml_attribute(var_args){
-var G__15134 = arguments.length;
-switch (G__15134) {
+var G__12316 = arguments.length;
+switch (G__12316) {
 case 2:
 return hoquet.runtime.xml_attribute.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -51,10 +51,10 @@ return [" ",hoquet.runtime.as_str(name),"=\"",cljs.core.str.cljs$core$IFn$_invok
 
 (hoquet.runtime.xml_attribute.cljs$lang$maxFixedArity = 3);
 
-hoquet.runtime.render_attribute = (function hoquet$runtime$render_attribute(p__15146){
-var vec__15147 = p__15146;
-var name = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__15147,(0),null);
-var value = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__15147,(1),null);
+hoquet.runtime.render_attribute = (function hoquet$runtime$render_attribute(p__12325){
+var vec__12326 = p__12325;
+var name = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12326,(0),null);
+var value = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12326,(1),null);
 if(value === true){
 return hoquet.runtime.xml_attribute.cljs$core$IFn$_invoke$arity$2(name,name);
 } else {
@@ -72,23 +72,23 @@ return cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.str,cljs.core.sor
 /**
  * Ensure a tag vector is of the form [tag-name attrs content].
  */
-hoquet.runtime.normalize_element = (function hoquet$runtime$normalize_element(p__15157){
-var vec__15161 = p__15157;
-var seq__15162 = cljs.core.seq(vec__15161);
-var first__15163 = cljs.core.first(seq__15162);
-var seq__15162__$1 = cljs.core.next(seq__15162);
-var tag = first__15163;
-var content = seq__15162__$1;
+hoquet.runtime.normalize_element = (function hoquet$runtime$normalize_element(p__12338){
+var vec__12340 = p__12338;
+var seq__12341 = cljs.core.seq(vec__12340);
+var first__12342 = cljs.core.first(seq__12341);
+var seq__12341__$1 = cljs.core.next(seq__12341);
+var tag = first__12342;
+var content = seq__12341__$1;
 if((!((((tag instanceof cljs.core.Keyword)) || ((tag instanceof cljs.core.Symbol)) || (typeof tag === 'string'))))){
 throw [cljs.core.str.cljs$core$IFn$_invoke$arity$1(tag)," is not a valid tag name"].join('');
 } else {
 }
 
-var vec__15166 = cljs.core.re_matches(hoquet.runtime.re_tag,hoquet.runtime.as_str(tag));
-var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__15166,(0),null);
-var tag__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__15166,(1),null);
-var id = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__15166,(2),null);
-var class$ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__15166,(3),null);
+var vec__12346 = cljs.core.re_matches(hoquet.runtime.re_tag,hoquet.runtime.as_str(tag));
+var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12346,(0),null);
+var tag__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12346,(1),null);
+var id = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12346,(2),null);
+var class$ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12346,(3),null);
 var tag_attrs = new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"id","id",-1388402092),id,new cljs.core.Keyword(null,"class","class",-2030961996),(cljs.core.truth_(class$)?clojure.string.replace(class$,"."," "):null)], null);
 var map_attrs = cljs.core.first(content);
 if(cljs.core.map_QMARK_(map_attrs)){
@@ -101,10 +101,10 @@ return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMP
  * Render a tag vector as a HTML element.
  */
 hoquet.runtime.render_element = (function hoquet$runtime$render_element(element){
-var vec__15170 = hoquet.runtime.normalize_element(element);
-var tag = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__15170,(0),null);
-var attrs = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__15170,(1),null);
-var content = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__15170,(2),null);
+var vec__12355 = hoquet.runtime.normalize_element(element);
+var tag = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12355,(0),null);
+var attrs = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12355,(1),null);
+var content = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12355,(2),null);
 if(cljs.core.truth_((function (){var or__4126__auto__ = content;
 if(cljs.core.truth_(or__4126__auto__)){
 return or__4126__auto__;
