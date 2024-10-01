@@ -4,11 +4,12 @@
                 [andare "1.1.587"] ;; A fork of core.async ported for use with self-hosted ClojureScript.
                 [cljs-bean "1.5.0"]
                 [chivorcam "1.0.0"]
-                [cljs-http "0.1.42" :exclusions [org.clojure/core.async]] ;; core.async is provided by andare
+                [cljs-http "0.1.48" :exclusions [org.clojure/core.async]] ;; core.async is provided by andare
                 [com.andrewmcveigh/cljs-time "0.5.0"]
                 [com.cemerick/url "0.1.1"]
                 [expound "0.7.1"]
                 [org.clojure/core.specs.alpha "0.2.44"]
+                [org.clojure/data.json "2.5.0"]
                 [org.clojure/math.combinatorics "0.1.3"]
                 [org.clojure/test.check "0.10.0-alpha3"]
                 [org.clojure/tools.reader "1.3.2"]
@@ -24,15 +25,14 @@
                 [viebel/re-frame "0.9.3-SNAPSHOT" :exclusions [reagent]]
                 [viebel/reagent "1.0.0-alpha2"]]
  :source-paths ["src"]
- :builds       {:core-analysis-cache {:target     :bootstrap
-                                      :output-dir "core-out"
-                                      :exclude    #{cljs.js}
-                                      :entries    [cljs.js]
-                                      :macros     []}
-                :analysis-cache {:target     :bootstrap
-                                 :output-dir "out"
-                                 :exclude    #{cljs.js}
-                                 :entries    [cljs.js chivorcam.core cljs.test clojure.test.check cljs.pprint cljs.analyzer lambdaisland.uri    cljs.spec.alpha cljs.spec.test.alpha cljs.spec.gen.alpha
-                                              cljs.core.match hoquet.runtime klipse-clj.doc]
-                                 :macros     [gadjett.macros klipse-clj.doc klipse-clj.macros clojure.template cljs.env.macros cljs.compiler.macros]}}}
-
+ :builds {:core-analysis-cache {:target :bootstrap
+                                :output-dir "core-out"
+                                :exclude #{cljs.js}
+                                :entries [cljs.js]
+                                :macros []}
+          :analysis-cache {:target :bootstrap
+                           :output-dir "out"
+                           :exclude #{cljs.js}
+                           :entries [cljs.js chivorcam.core cljs.test clojure.test.check cljs.pprint cljs.analyzer lambdaisland.uri cljs.spec.alpha cljs.spec.test.alpha cljs.spec.gen.alpha
+                                     cljs.core.match hoquet.runtime klipse-clj.doc]
+                           :macros [gadjett.macros klipse-clj.doc klipse-clj.macros clojure.template cljs.env.macros cljs.compiler.macros]}}}

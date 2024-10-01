@@ -23,7 +23,7 @@ throw (new Error("Assert failed: (every? symbol? argv)"));
 
 return clojure.walk.postwalk_replace(cljs.core.zipmap(argv,values),expr);
 });
-var ret__4785__auto___19411 = (function (){
+var ret__5781__auto___18960 = (function (){
 /**
  * Repeatedly copies expr (in a do block) for each group of arguments
  *   in values.  values are automatically partitioned by the number of
@@ -33,23 +33,23 @@ var ret__4785__auto___19411 = (function (){
  *         ;=> (do (+ 4 2) (+ 5 3))
  */
 clojure.template$macros.do_template = (function clojure$template$macros$do_template(var_args){
-var args__4742__auto__ = [];
-var len__4736__auto___19412 = arguments.length;
-var i__4737__auto___19413 = (0);
+var args__5732__auto__ = [];
+var len__5726__auto___18961 = arguments.length;
+var i__5727__auto___18962 = (0);
 while(true){
-if((i__4737__auto___19413 < len__4736__auto___19412)){
-args__4742__auto__.push((arguments[i__4737__auto___19413]));
+if((i__5727__auto___18962 < len__5726__auto___18961)){
+args__5732__auto__.push((arguments[i__5727__auto___18962]));
 
-var G__19420 = (i__4737__auto___19413 + (1));
-i__4737__auto___19413 = G__19420;
+var G__18963 = (i__5727__auto___18962 + (1));
+i__5727__auto___18962 = G__18963;
 continue;
 } else {
 }
 break;
 }
 
-var argseq__4743__auto__ = ((((4) < args__4742__auto__.length))?(new cljs.core.IndexedSeq(args__4742__auto__.slice((4)),(0),null)):null);
-return clojure.template$macros.do_template.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),(arguments[(2)]),(arguments[(3)]),argseq__4743__auto__);
+var argseq__5733__auto__ = ((((4) < args__5732__auto__.length))?(new cljs.core.IndexedSeq(args__5732__auto__.slice((4)),(0),null)):null);
+return clojure.template$macros.do_template.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),(arguments[(2)]),(arguments[(3)]),argseq__5733__auto__);
 });
 
 (clojure.template$macros.do_template.cljs$core$IFn$_invoke$arity$variadic = (function (_AMPERSAND_form,_AMPERSAND_env,argv,expr,values){
@@ -62,17 +62,17 @@ return clojure.template$macros.apply_template(argv,expr,a);
 (clojure.template$macros.do_template.cljs$lang$maxFixedArity = (4));
 
 /** @this {Function} */
-(clojure.template$macros.do_template.cljs$lang$applyTo = (function (seq19373){
-var G__19374 = cljs.core.first(seq19373);
-var seq19373__$1 = cljs.core.next(seq19373);
-var G__19375 = cljs.core.first(seq19373__$1);
-var seq19373__$2 = cljs.core.next(seq19373__$1);
-var G__19376 = cljs.core.first(seq19373__$2);
-var seq19373__$3 = cljs.core.next(seq19373__$2);
-var G__19377 = cljs.core.first(seq19373__$3);
-var seq19373__$4 = cljs.core.next(seq19373__$3);
-var self__4723__auto__ = this;
-return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__19374,G__19375,G__19376,G__19377,seq19373__$4);
+(clojure.template$macros.do_template.cljs$lang$applyTo = (function (seq18924){
+var G__18925 = cljs.core.first(seq18924);
+var seq18924__$1 = cljs.core.next(seq18924);
+var G__18926 = cljs.core.first(seq18924__$1);
+var seq18924__$2 = cljs.core.next(seq18924__$1);
+var G__18927 = cljs.core.first(seq18924__$2);
+var seq18924__$3 = cljs.core.next(seq18924__$2);
+var G__18928 = cljs.core.first(seq18924__$3);
+var seq18924__$4 = cljs.core.next(seq18924__$3);
+var self__5711__auto__ = this;
+return self__5711__auto__.cljs$core$IFn$_invoke$arity$variadic(G__18925,G__18926,G__18927,G__18928,seq18924__$4);
 }));
 
 return null;

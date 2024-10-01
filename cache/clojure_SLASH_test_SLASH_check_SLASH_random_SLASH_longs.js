@@ -1,4 +1,7 @@
 goog.provide('clojure.test.check.random.longs');
+goog.scope(function(){
+  clojure.test.check.random.longs.goog$module$goog$math$Long = goog.module.get('goog.math.Long');
+});
 clojure.test.check.random.longs.unsigned_bit_shift_right = (function clojure$test$check$random$longs$unsigned_bit_shift_right(x,n){
 return x.shiftRightUnsigned(n);
 });
@@ -55,7 +58,7 @@ var arr = [(0),(0),(0),(0)];
 
 (arr[(3)] = ((arr[(3)]) & (65535)));
 
-return goog.math.Long.fromBits((((arr[(1)]) << (16)) | (arr[(0)])),(((arr[(3)]) << (16)) | (arr[(2)])));
+return clojure.test.check.random.longs.goog$module$goog$math$Long.fromBits((((arr[(1)]) << (16)) | (arr[(0)])),(((arr[(3)]) << (16)) | (arr[(2)])));
 });
 clojure.test.check.random.longs.bit_xor = (function clojure$test$check$random$longs$bit_xor(x,y){
 return x.xor(y);
@@ -64,26 +67,26 @@ clojure.test.check.random.longs.bit_or = (function clojure$test$check$random$lon
 return x.or(y);
 });
 clojure.test.check.random.longs.from_string = (function clojure$test$check$random$longs$from_string(s,radix){
-return goog.math.Long.fromString(s,radix);
+return clojure.test.check.random.longs.goog$module$goog$math$Long.fromString(s,radix);
 });
 clojure.test.check.random.longs.from_number = (function clojure$test$check$random$longs$from_number(x){
-return goog.math.Long.fromNumber(x);
+return clojure.test.check.random.longs.goog$module$goog$math$Long.fromNumber(x);
 });
 /**
  * Coerces to long, or returns nil if not possible.
  */
 clojure.test.check.random.longs.__GT_long = (function clojure$test$check$random$longs$__GT_long(x){
 if(typeof x === 'number'){
-return goog.math.Long.fromNumber(x);
+return clojure.test.check.random.longs.goog$module$goog$math$Long.fromNumber(x);
 } else {
-if((x instanceof goog.math.Long)){
+if((x instanceof clojure.test.check.random.longs.goog$module$goog$math$Long)){
 return x;
 } else {
 return null;
 }
 }
 });
-clojure.test.check.random.longs.ONE = goog.math.Long.getOne();
+clojure.test.check.random.longs.ONE = clojure.test.check.random.longs.goog$module$goog$math$Long.getOne();
 clojure.test.check.random.longs.bit_count = clojure.test.check.random.longs.bit_count_impl.bit_count;
 
 //# sourceMappingURL=clojure.test.check.random.longs.js.map

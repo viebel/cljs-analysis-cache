@@ -1,22 +1,13 @@
-// Copyright 2009 The Closure Library Authors. All Rights Reserved.
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//      http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS-IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
+/**
+ * @license
+ * Copyright The Closure Library Authors.
+ * SPDX-License-Identifier: Apache-2.0
+ */
 
 /**
  * @fileoverview Defines a Long class for representing a 64-bit two's-complement
  * integer value, which faithfully simulates the behavior of a Java "long". This
  * implementation is derived from LongLib in GWT.
- *
  */
 
 goog.module('goog.math.Long');
@@ -131,11 +122,39 @@ class Long {
     if (digits.length < safeDigits) {
       // Up to 13 leading 0s we might need to insert as the greatest safeDigits
       // value is 14 (for radix 2).
-      digits = '0000000000000'.substr(digits.length - safeDigits) + digits;
+      digits = '0000000000000'.slice(digits.length - safeDigits) + digits;
     }
 
     val = remDiv.toNumber();
     return (radix == 10 ? val : val.toString(radix)) + digits;
+  }
+
+  /**
+   * @param {number=} opt_radix The radix in which the text should be written.
+   * @return {string} The unsigned textual representation of this value.
+   */
+  toUnsignedString(opt_radix) {
+    // If the sign bit isn't even set just use the normal flow
+    if (this.high_ >= 0) {
+      return this.toString(opt_radix);
+    }
+
+    var radix = opt_radix || 10;
+    if (radix < 2 || 36 < radix) {
+      throw new Error('radix out of range: ' + radix);
+    }
+    // Use fromInt() to get the 64-bit representation of the radix as the entire
+    // radix range should be cached.
+    var longRadix = Long.fromInt(radix);
+    // Divide as unsigned 64-bit numbers.
+    var quotient = this.shiftRightUnsigned(1).div(longRadix).shiftLeft(1);
+    var remainder = this.subtract(quotient.multiply(longRadix));
+    // Check if we need to sign adjust the quotient.
+    if (remainder.greaterThanOrEqual(longRadix)) {
+      quotient = quotient.add(Long.getOne());
+      remainder = this.subtract(quotient.multiply(longRadix));
+    }
+    return quotient.toString(radix) + remainder.toString(radix);
   }
 
   /** @return {number} The high 32-bits as a signed value. */
@@ -192,6 +211,15 @@ class Long {
   /** @return {boolean} Whether this value is odd. */
   isOdd() {
     return (this.low_ & 1) == 1;
+  }
+
+  /**
+   * Returns a hash code for this long object that similar java.lang.Long one.
+   *
+   * @return {number} 32 bit hash code for this object.
+   */
+  hashCode() {
+    return this.getLowBits() ^ this.getHighBits();
   }
 
   /**

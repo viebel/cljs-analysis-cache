@@ -1,5 +1,5 @@
 goog.provide('klipse_clj.doc$macros');
-var ret__4785__auto___19679 = /**
+var ret__5781__auto___19372 = /**
  * Prints documentation for a var or special form given its name
  */
 klipse_clj.doc$macros.doc = (function klipse_clj$doc$macros$doc(_AMPERSAND_form,_AMPERSAND_env,name){

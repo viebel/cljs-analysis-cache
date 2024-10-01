@@ -25,8 +25,8 @@ hoquet.runtime.escape_html = (function hoquet$runtime$escape_html(text){
 return clojure.string.escape(hoquet.runtime.as_str(text),hoquet.runtime.character_escapes);
 });
 hoquet.runtime.xml_attribute = (function hoquet$runtime$xml_attribute(var_args){
-var G__12316 = arguments.length;
-switch (G__12316) {
+var G__16002 = arguments.length;
+switch (G__16002) {
 case 2:
 return hoquet.runtime.xml_attribute.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -51,17 +51,17 @@ return [" ",hoquet.runtime.as_str(name),"=\"",cljs.core.str.cljs$core$IFn$_invok
 
 (hoquet.runtime.xml_attribute.cljs$lang$maxFixedArity = 3);
 
-hoquet.runtime.render_attribute = (function hoquet$runtime$render_attribute(p__12325){
-var vec__12326 = p__12325;
-var name = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12326,(0),null);
-var value = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12326,(1),null);
+hoquet.runtime.render_attribute = (function hoquet$runtime$render_attribute(p__16009){
+var vec__16010 = p__16009;
+var name = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__16010,(0),null);
+var value = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__16010,(1),null);
 if(value === true){
 return hoquet.runtime.xml_attribute.cljs$core$IFn$_invoke$arity$2(name,name);
 } else {
 if(cljs.core.not(value)){
 return "";
 } else {
-return hoquet.runtime.xml_attribute.cljs$core$IFn$_invoke$arity$3(name,((cljs.core.map_QMARK_(value))?(hoquet.runtime.render_attr_map.cljs$core$IFn$_invoke$arity$1 ? hoquet.runtime.render_attr_map.cljs$core$IFn$_invoke$arity$1(value) : hoquet.runtime.render_attr_map.call(null,value)):value),true);
+return hoquet.runtime.xml_attribute.cljs$core$IFn$_invoke$arity$3(name,((cljs.core.map_QMARK_(value))?(hoquet.runtime.render_attr_map.cljs$core$IFn$_invoke$arity$1 ? hoquet.runtime.render_attr_map.cljs$core$IFn$_invoke$arity$1(value) : hoquet.runtime.render_attr_map.call(null, value)):value),true);
 
 }
 }
@@ -72,23 +72,23 @@ return cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.str,cljs.core.sor
 /**
  * Ensure a tag vector is of the form [tag-name attrs content].
  */
-hoquet.runtime.normalize_element = (function hoquet$runtime$normalize_element(p__12338){
-var vec__12340 = p__12338;
-var seq__12341 = cljs.core.seq(vec__12340);
-var first__12342 = cljs.core.first(seq__12341);
-var seq__12341__$1 = cljs.core.next(seq__12341);
-var tag = first__12342;
-var content = seq__12341__$1;
-if((!((((tag instanceof cljs.core.Keyword)) || ((tag instanceof cljs.core.Symbol)) || (typeof tag === 'string'))))){
+hoquet.runtime.normalize_element = (function hoquet$runtime$normalize_element(p__16015){
+var vec__16018 = p__16015;
+var seq__16019 = cljs.core.seq(vec__16018);
+var first__16020 = cljs.core.first(seq__16019);
+var seq__16019__$1 = cljs.core.next(seq__16019);
+var tag = first__16020;
+var content = seq__16019__$1;
+if((!((((tag instanceof cljs.core.Keyword)) || ((((tag instanceof cljs.core.Symbol)) || (typeof tag === 'string'))))))){
 throw [cljs.core.str.cljs$core$IFn$_invoke$arity$1(tag)," is not a valid tag name"].join('');
 } else {
 }
 
-var vec__12346 = cljs.core.re_matches(hoquet.runtime.re_tag,hoquet.runtime.as_str(tag));
-var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12346,(0),null);
-var tag__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12346,(1),null);
-var id = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12346,(2),null);
-var class$ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12346,(3),null);
+var vec__16025 = cljs.core.re_matches(hoquet.runtime.re_tag,hoquet.runtime.as_str(tag));
+var _ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__16025,(0),null);
+var tag__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__16025,(1),null);
+var id = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__16025,(2),null);
+var class$ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__16025,(3),null);
 var tag_attrs = new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"id","id",-1388402092),id,new cljs.core.Keyword(null,"class","class",-2030961996),(cljs.core.truth_(class$)?clojure.string.replace(class$,"."," "):null)], null);
 var map_attrs = cljs.core.first(content);
 if(cljs.core.map_QMARK_(map_attrs)){
@@ -101,18 +101,18 @@ return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMP
  * Render a tag vector as a HTML element.
  */
 hoquet.runtime.render_element = (function hoquet$runtime$render_element(element){
-var vec__12355 = hoquet.runtime.normalize_element(element);
-var tag = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12355,(0),null);
-var attrs = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12355,(1),null);
-var content = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12355,(2),null);
-if(cljs.core.truth_((function (){var or__4126__auto__ = content;
-if(cljs.core.truth_(or__4126__auto__)){
-return or__4126__auto__;
+var vec__16032 = hoquet.runtime.normalize_element(element);
+var tag = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__16032,(0),null);
+var attrs = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__16032,(1),null);
+var content = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__16032,(2),null);
+if(cljs.core.truth_((function (){var or__5002__auto__ = content;
+if(cljs.core.truth_(or__5002__auto__)){
+return or__5002__auto__;
 } else {
-return (hoquet.runtime.container_tags.cljs$core$IFn$_invoke$arity$1 ? hoquet.runtime.container_tags.cljs$core$IFn$_invoke$arity$1(tag) : hoquet.runtime.container_tags.call(null,tag));
+return (hoquet.runtime.container_tags.cljs$core$IFn$_invoke$arity$1 ? hoquet.runtime.container_tags.cljs$core$IFn$_invoke$arity$1(tag) : hoquet.runtime.container_tags.call(null, tag));
 }
 })())){
-return ["<",cljs.core.str.cljs$core$IFn$_invoke$arity$1(tag),cljs.core.str.cljs$core$IFn$_invoke$arity$1(hoquet.runtime.render_attr_map(attrs)),">",cljs.core.str.cljs$core$IFn$_invoke$arity$1((hoquet.runtime.render_html.cljs$core$IFn$_invoke$arity$1 ? hoquet.runtime.render_html.cljs$core$IFn$_invoke$arity$1(content) : hoquet.runtime.render_html.call(null,content))),"</",cljs.core.str.cljs$core$IFn$_invoke$arity$1(tag),">"].join('');
+return ["<",cljs.core.str.cljs$core$IFn$_invoke$arity$1(tag),cljs.core.str.cljs$core$IFn$_invoke$arity$1(hoquet.runtime.render_attr_map(attrs)),">",cljs.core.str.cljs$core$IFn$_invoke$arity$1((hoquet.runtime.render_html.cljs$core$IFn$_invoke$arity$1 ? hoquet.runtime.render_html.cljs$core$IFn$_invoke$arity$1(content) : hoquet.runtime.render_html.call(null, content))),"</",cljs.core.str.cljs$core$IFn$_invoke$arity$1(tag),">"].join('');
 } else {
 return ["<",cljs.core.str.cljs$core$IFn$_invoke$arity$1(tag),cljs.core.str.cljs$core$IFn$_invoke$arity$1(hoquet.runtime.render_attr_map(attrs))," />"].join('');
 }

@@ -13,7 +13,7 @@ lambdaisland.uri.platform.byte__GT_hex = (function lambdaisland$uri$platform$byt
 var byte$__$1 = ((255) & byte$);
 var low_nibble = ((15) & byte$__$1);
 var high_nibble = (byte$__$1 >> (4));
-return [cljs.core.str.cljs$core$IFn$_invoke$arity$1((lambdaisland.uri.platform.hex_digit.cljs$core$IFn$_invoke$arity$1 ? lambdaisland.uri.platform.hex_digit.cljs$core$IFn$_invoke$arity$1(high_nibble) : lambdaisland.uri.platform.hex_digit.call(null,high_nibble))),cljs.core.str.cljs$core$IFn$_invoke$arity$1((lambdaisland.uri.platform.hex_digit.cljs$core$IFn$_invoke$arity$1 ? lambdaisland.uri.platform.hex_digit.cljs$core$IFn$_invoke$arity$1(low_nibble) : lambdaisland.uri.platform.hex_digit.call(null,low_nibble)))].join('');
+return [cljs.core.str.cljs$core$IFn$_invoke$arity$1((lambdaisland.uri.platform.hex_digit.cljs$core$IFn$_invoke$arity$1 ? lambdaisland.uri.platform.hex_digit.cljs$core$IFn$_invoke$arity$1(high_nibble) : lambdaisland.uri.platform.hex_digit.call(null, high_nibble))),cljs.core.str.cljs$core$IFn$_invoke$arity$1((lambdaisland.uri.platform.hex_digit.cljs$core$IFn$_invoke$arity$1 ? lambdaisland.uri.platform.hex_digit.cljs$core$IFn$_invoke$arity$1(low_nibble) : lambdaisland.uri.platform.hex_digit.call(null, low_nibble)))].join('');
 });
 lambdaisland.uri.platform.char_code_at = (function lambdaisland$uri$platform$char_code_at(str,pos){
 return str.charCodeAt(pos);
